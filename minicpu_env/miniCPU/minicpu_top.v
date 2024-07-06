@@ -137,7 +137,7 @@ decoder_5_32 u_dec3(.in(op_19_15 ), .co(op_19_15_d ));
 assign inst_add_w  = op_31_26_d[6'h00] & op_25_22_d[4'h0] & op_21_20_d[2'h1] & op_19_15_d[5'h00];
 assign inst_addi_w = op_31_26_d[6'h00] & op_25_22_d[4'ha];
 assign inst_ld_w   = op_31_26_d[6'h0a] & op_25_22_d[4'h2];
-assign inst_st_w   = ;//在这里实现inst_st_w指令的译码
+assign inst_st_w   = op_31_26_d[6'h0a] & op_25_22_d[4'h6];//在这里实现inst_st_w指令的译码
 assign inst_bne    = op_31_26_d[6'h17];
 
 assign src2_is_imm   = inst_addi_w|inst_ld_w|inst_st_w;//在这里实现立即数选择信号
@@ -159,7 +159,7 @@ regfile u_regfile(
     .wdata  (rf_wdata )
     );//在空出的括号里完成引脚匹配
 
-assign br_offs   = {{14{offs16[15]}},offs16[15:0],2'b0};//在这里完成br_offs信号的生成  SignExtend({offs16, 2'b0}, 32)
+assign br_offs   = {{14{i16[15]}},i16[15:0],2'b0};//在这里完成br_offs信号的生成  SignExtend({offs16, 2'b0}, 32)
 assign br_target = pc + br_offs;
 assign rj_eq_rd  = (rj_value == rkd_value);
 assign br_taken  = valid && inst_bne  && !rj_eq_rd;//完成branch需要

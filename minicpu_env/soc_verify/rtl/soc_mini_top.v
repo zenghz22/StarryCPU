@@ -84,11 +84,12 @@ begin: speedup_simulation
 end
 else
 begin: pll
-    clk_pll clk_pll
+    clk_wiz_0 clk_pll
     (
         .clk_in1 (clk),
-        .cpu_clk (cpu_clk),
-        .timer_clk ()
+        .clk_out1(cpu_clk)
+        //.cpu_clk (cpu_clk),
+        //.timer_clk ()
     );
 end
 endgenerate
