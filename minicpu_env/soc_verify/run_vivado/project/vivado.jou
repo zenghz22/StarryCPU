@@ -1,0 +1,18 @@
+#-----------------------------------------------------------
+# Vivado v2017.3 (64-bit)
+# SW Build 2018833 on Wed Oct  4 19:58:22 MDT 2017
+# IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
+# Start of session at: Mon Jul  8 01:21:16 2024
+# Process ID: 28844
+# Current directory: D:/1Learn/24Summer/Lxb/StarryCPU/minicpu_env/soc_verify/run_vivado/project
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent29868 D:\1Learn\24Summer\Lxb\StarryCPU\minicpu_env\soc_verify\run_vivado\project\loongson.xpr
+# Log file: D:/1Learn/24Summer/Lxb/StarryCPU/minicpu_env/soc_verify/run_vivado/project/vivado.log
+# Journal file: D:/1Learn/24Summer/Lxb/StarryCPU/minicpu_env/soc_verify/run_vivado/project\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/1Learn/24Summer/Lxb/StarryCPU/minicpu_env/soc_verify/run_vivado/project/loongson.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+source tb_top.tcl
+run 5 us
+close_sim
