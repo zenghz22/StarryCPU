@@ -1,3 +1,24 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Mon Jul  8 00:32:33 2024
+| Host         : KCN running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7a200tfbg676-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'inst_ram'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of inst_ram (xilinx.com:ip:dist_mem_gen:8.0) from (Rev. 12) to (Rev. 13)
+
+
+
+
+
+
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.3 (win64) Build 2018833 Wed Oct  4 19:58:22 MDT 2017

@@ -1,10 +1,10 @@
-// Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+// Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2017.3 (win64) Build 2018833 Wed Oct  4 19:58:22 MDT 2017
-// Date        : Sat Jul  6 21:56:40 2024
-// Host        : LAPTOP-76HLJIEN running 64-bit major release  (build 9200)
+// Tool Version: Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+// Date        : Mon Jul  8 00:33:23 2024
+// Host        : KCN running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
-//               D:/1Learn/24Summer/Lxb/StarryCPU/minicpu_env/soc_verify/rtl/xilinx_ip/inst_ram/inst_ram_sim_netlist.v
+//               C:/longxin/StarryCPU/minicpu_env/soc_verify/rtl/xilinx_ip/inst_ram/inst_ram_sim_netlist.v
 // Design      : inst_ram
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -12,7 +12,7 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "inst_ram,dist_mem_gen_v8_0_12,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "dist_mem_gen_v8_0_12,Vivado 2017.3" *) 
+(* CHECK_LICENSE_TYPE = "inst_ram,dist_mem_gen_v8_0_13,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "dist_mem_gen_v8_0_13,Vivado 2019.2" *) 
 (* NotValidForBitStream *)
 module inst_ram
    (a,
@@ -67,7 +67,7 @@ module inst_ram
   (* c_reg_a_d_inputs = "0" *) 
   (* c_sync_enable = "1" *) 
   (* c_width = "32" *) 
-  inst_ram_dist_mem_gen_v8_0_12 U0
+  inst_ram_dist_mem_gen_v8_0_13 U0
        (.a(a),
         .clk(clk),
         .d(d),
@@ -97,8 +97,8 @@ endmodule
 (* C_MEM_INIT_FILE = "inst_ram.mif" *) (* C_MEM_TYPE = "1" *) (* C_PARSER_TYPE = "1" *) 
 (* C_PIPELINE_STAGES = "0" *) (* C_QCE_JOINED = "0" *) (* C_QUALIFY_WE = "0" *) 
 (* C_READ_MIF = "1" *) (* C_REG_A_D_INPUTS = "0" *) (* C_REG_DPRA_INPUT = "0" *) 
-(* C_SYNC_ENABLE = "1" *) (* C_WIDTH = "32" *) (* ORIG_REF_NAME = "dist_mem_gen_v8_0_12" *) 
-module inst_ram_dist_mem_gen_v8_0_12
+(* C_SYNC_ENABLE = "1" *) (* C_WIDTH = "32" *) (* ORIG_REF_NAME = "dist_mem_gen_v8_0_13" *) 
+module inst_ram_dist_mem_gen_v8_0_13
    (a,
     d,
     dpra,
@@ -239,7 +239,7 @@ module inst_ram_dist_mem_gen_v8_0_12
   assign qspo[0] = \<const0> ;
   GND GND
        (.G(\<const0> ));
-  inst_ram_dist_mem_gen_v8_0_12_synth \synth_options.dist_mem_inst 
+  inst_ram_dist_mem_gen_v8_0_13_synth \synth_options.dist_mem_inst 
        (.a(a),
         .clk(clk),
         .d(d),
@@ -247,8 +247,8 @@ module inst_ram_dist_mem_gen_v8_0_12
         .we(we));
 endmodule
 
-(* ORIG_REF_NAME = "dist_mem_gen_v8_0_12_synth" *) 
-module inst_ram_dist_mem_gen_v8_0_12_synth
+(* ORIG_REF_NAME = "dist_mem_gen_v8_0_13_synth" *) 
+module inst_ram_dist_mem_gen_v8_0_13_synth
    (spo,
     clk,
     d,
@@ -614,6 +614,13 @@ module inst_ram_spram
         .D(spo[9]),
         .Q(qspo_int[9]),
         .R(1'b0));
+  (* RTL_RAM_BITS = "1024" *) 
+  (* RTL_RAM_NAME = "synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram" *) 
+  (* ram_addr_begin = "0" *) 
+  (* ram_addr_end = "31" *) 
+  (* ram_offset = "0" *) 
+  (* ram_slice_begin = "0" *) 
+  (* ram_slice_end = "0" *) 
   RAM32X1S #(
     .INIT(32'h00000186)) 
     ram_reg_0_31_0_0
@@ -626,6 +633,13 @@ module inst_ram_spram
         .O(spo[0]),
         .WCLK(clk),
         .WE(we));
+  (* RTL_RAM_BITS = "1024" *) 
+  (* RTL_RAM_NAME = "synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram" *) 
+  (* ram_addr_begin = "0" *) 
+  (* ram_addr_end = "31" *) 
+  (* ram_offset = "0" *) 
+  (* ram_slice_begin = "10" *) 
+  (* ram_slice_end = "10" *) 
   RAM32X1S #(
     .INIT(32'h0000002A)) 
     ram_reg_0_31_10_10
@@ -638,6 +652,13 @@ module inst_ram_spram
         .O(spo[10]),
         .WCLK(clk),
         .WE(we));
+  (* RTL_RAM_BITS = "1024" *) 
+  (* RTL_RAM_NAME = "synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram" *) 
+  (* ram_addr_begin = "0" *) 
+  (* ram_addr_end = "31" *) 
+  (* ram_offset = "0" *) 
+  (* ram_slice_begin = "11" *) 
+  (* ram_slice_end = "11" *) 
   RAM32X1S #(
     .INIT(32'h00000000)) 
     ram_reg_0_31_11_11
@@ -650,6 +671,13 @@ module inst_ram_spram
         .O(spo[11]),
         .WCLK(clk),
         .WE(we));
+  (* RTL_RAM_BITS = "1024" *) 
+  (* RTL_RAM_NAME = "synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram" *) 
+  (* ram_addr_begin = "0" *) 
+  (* ram_addr_end = "31" *) 
+  (* ram_offset = "0" *) 
+  (* ram_slice_begin = "12" *) 
+  (* ram_slice_end = "12" *) 
   RAM32X1S #(
     .INIT(32'h00000620)) 
     ram_reg_0_31_12_12
@@ -662,6 +690,13 @@ module inst_ram_spram
         .O(spo[12]),
         .WCLK(clk),
         .WE(we));
+  (* RTL_RAM_BITS = "1024" *) 
+  (* RTL_RAM_NAME = "synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram" *) 
+  (* ram_addr_begin = "0" *) 
+  (* ram_addr_end = "31" *) 
+  (* ram_offset = "0" *) 
+  (* ram_slice_begin = "13" *) 
+  (* ram_slice_end = "13" *) 
   RAM32X1S #(
     .INIT(32'h00000320)) 
     ram_reg_0_31_13_13
@@ -674,6 +709,13 @@ module inst_ram_spram
         .O(spo[13]),
         .WCLK(clk),
         .WE(we));
+  (* RTL_RAM_BITS = "1024" *) 
+  (* RTL_RAM_NAME = "synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram" *) 
+  (* ram_addr_begin = "0" *) 
+  (* ram_addr_end = "31" *) 
+  (* ram_offset = "0" *) 
+  (* ram_slice_begin = "14" *) 
+  (* ram_slice_end = "14" *) 
   RAM32X1S #(
     .INIT(32'h00000300)) 
     ram_reg_0_31_14_14
@@ -686,6 +728,13 @@ module inst_ram_spram
         .O(spo[14]),
         .WCLK(clk),
         .WE(we));
+  (* RTL_RAM_BITS = "1024" *) 
+  (* RTL_RAM_NAME = "synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram" *) 
+  (* ram_addr_begin = "0" *) 
+  (* ram_addr_end = "31" *) 
+  (* ram_offset = "0" *) 
+  (* ram_slice_begin = "15" *) 
+  (* ram_slice_end = "15" *) 
   RAM32X1S #(
     .INIT(32'h00000200)) 
     ram_reg_0_31_15_15
@@ -698,6 +747,13 @@ module inst_ram_spram
         .O(spo[15]),
         .WCLK(clk),
         .WE(we));
+  (* RTL_RAM_BITS = "1024" *) 
+  (* RTL_RAM_NAME = "synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram" *) 
+  (* ram_addr_begin = "0" *) 
+  (* ram_addr_end = "31" *) 
+  (* ram_offset = "0" *) 
+  (* ram_slice_begin = "16" *) 
+  (* ram_slice_end = "16" *) 
   RAM32X1S #(
     .INIT(32'h00000200)) 
     ram_reg_0_31_16_16
@@ -710,6 +766,13 @@ module inst_ram_spram
         .O(spo[16]),
         .WCLK(clk),
         .WE(we));
+  (* RTL_RAM_BITS = "1024" *) 
+  (* RTL_RAM_NAME = "synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram" *) 
+  (* ram_addr_begin = "0" *) 
+  (* ram_addr_end = "31" *) 
+  (* ram_offset = "0" *) 
+  (* ram_slice_begin = "17" *) 
+  (* ram_slice_end = "17" *) 
   RAM32X1S #(
     .INIT(32'h00000200)) 
     ram_reg_0_31_17_17
@@ -722,6 +785,13 @@ module inst_ram_spram
         .O(spo[17]),
         .WCLK(clk),
         .WE(we));
+  (* RTL_RAM_BITS = "1024" *) 
+  (* RTL_RAM_NAME = "synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram" *) 
+  (* ram_addr_begin = "0" *) 
+  (* ram_addr_end = "31" *) 
+  (* ram_offset = "0" *) 
+  (* ram_slice_begin = "18" *) 
+  (* ram_slice_end = "18" *) 
   RAM32X1S #(
     .INIT(32'h00000200)) 
     ram_reg_0_31_18_18
@@ -734,6 +804,13 @@ module inst_ram_spram
         .O(spo[18]),
         .WCLK(clk),
         .WE(we));
+  (* RTL_RAM_BITS = "1024" *) 
+  (* RTL_RAM_NAME = "synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram" *) 
+  (* ram_addr_begin = "0" *) 
+  (* ram_addr_end = "31" *) 
+  (* ram_offset = "0" *) 
+  (* ram_slice_begin = "19" *) 
+  (* ram_slice_end = "19" *) 
   RAM32X1S #(
     .INIT(32'h00000200)) 
     ram_reg_0_31_19_19
@@ -746,6 +823,13 @@ module inst_ram_spram
         .O(spo[19]),
         .WCLK(clk),
         .WE(we));
+  (* RTL_RAM_BITS = "1024" *) 
+  (* RTL_RAM_NAME = "synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram" *) 
+  (* ram_addr_begin = "0" *) 
+  (* ram_addr_end = "31" *) 
+  (* ram_offset = "0" *) 
+  (* ram_slice_begin = "1" *) 
+  (* ram_slice_end = "1" *) 
   RAM32X1S #(
     .INIT(32'h00000524)) 
     ram_reg_0_31_1_1
@@ -758,6 +842,13 @@ module inst_ram_spram
         .O(spo[1]),
         .WCLK(clk),
         .WE(we));
+  (* RTL_RAM_BITS = "1024" *) 
+  (* RTL_RAM_NAME = "synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram" *) 
+  (* ram_addr_begin = "0" *) 
+  (* ram_addr_end = "31" *) 
+  (* ram_offset = "0" *) 
+  (* ram_slice_begin = "20" *) 
+  (* ram_slice_end = "20" *) 
   RAM32X1S #(
     .INIT(32'h00000730)) 
     ram_reg_0_31_20_20
@@ -770,6 +861,13 @@ module inst_ram_spram
         .O(spo[20]),
         .WCLK(clk),
         .WE(we));
+  (* RTL_RAM_BITS = "1024" *) 
+  (* RTL_RAM_NAME = "synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram" *) 
+  (* ram_addr_begin = "0" *) 
+  (* ram_addr_end = "31" *) 
+  (* ram_offset = "0" *) 
+  (* ram_slice_begin = "21" *) 
+  (* ram_slice_end = "21" *) 
   RAM32X1S #(
     .INIT(32'h00000200)) 
     ram_reg_0_31_21_21
@@ -782,6 +880,13 @@ module inst_ram_spram
         .O(spo[21]),
         .WCLK(clk),
         .WE(we));
+  (* RTL_RAM_BITS = "1024" *) 
+  (* RTL_RAM_NAME = "synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram" *) 
+  (* ram_addr_begin = "0" *) 
+  (* ram_addr_end = "31" *) 
+  (* ram_offset = "0" *) 
+  (* ram_slice_begin = "22" *) 
+  (* ram_slice_end = "22" *) 
   RAM32X1S #(
     .INIT(32'h00000200)) 
     ram_reg_0_31_22_22
@@ -794,6 +899,13 @@ module inst_ram_spram
         .O(spo[22]),
         .WCLK(clk),
         .WE(we));
+  (* RTL_RAM_BITS = "1024" *) 
+  (* RTL_RAM_NAME = "synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram" *) 
+  (* ram_addr_begin = "0" *) 
+  (* ram_addr_end = "31" *) 
+  (* ram_offset = "0" *) 
+  (* ram_slice_begin = "23" *) 
+  (* ram_slice_end = "23" *) 
   RAM32X1S #(
     .INIT(32'h000006DF)) 
     ram_reg_0_31_23_23
@@ -806,6 +918,13 @@ module inst_ram_spram
         .O(spo[23]),
         .WCLK(clk),
         .WE(we));
+  (* RTL_RAM_BITS = "1024" *) 
+  (* RTL_RAM_NAME = "synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram" *) 
+  (* ram_addr_begin = "0" *) 
+  (* ram_addr_end = "31" *) 
+  (* ram_offset = "0" *) 
+  (* ram_slice_begin = "24" *) 
+  (* ram_slice_end = "24" *) 
   RAM32X1S #(
     .INIT(32'h00000600)) 
     ram_reg_0_31_24_24
@@ -818,6 +937,13 @@ module inst_ram_spram
         .O(spo[24]),
         .WCLK(clk),
         .WE(we));
+  (* RTL_RAM_BITS = "1024" *) 
+  (* RTL_RAM_NAME = "synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram" *) 
+  (* ram_addr_begin = "0" *) 
+  (* ram_addr_end = "31" *) 
+  (* ram_offset = "0" *) 
+  (* ram_slice_begin = "25" *) 
+  (* ram_slice_end = "25" *) 
   RAM32X1S #(
     .INIT(32'h000002CF)) 
     ram_reg_0_31_25_25
@@ -830,6 +956,13 @@ module inst_ram_spram
         .O(spo[25]),
         .WCLK(clk),
         .WE(we));
+  (* RTL_RAM_BITS = "1024" *) 
+  (* RTL_RAM_NAME = "synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram" *) 
+  (* ram_addr_begin = "0" *) 
+  (* ram_addr_end = "31" *) 
+  (* ram_offset = "0" *) 
+  (* ram_slice_begin = "26" *) 
+  (* ram_slice_end = "26" *) 
   RAM32X1S #(
     .INIT(32'h00000A00)) 
     ram_reg_0_31_26_26
@@ -842,6 +975,13 @@ module inst_ram_spram
         .O(spo[26]),
         .WCLK(clk),
         .WE(we));
+  (* RTL_RAM_BITS = "1024" *) 
+  (* RTL_RAM_NAME = "synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram" *) 
+  (* ram_addr_begin = "0" *) 
+  (* ram_addr_end = "31" *) 
+  (* ram_offset = "0" *) 
+  (* ram_slice_begin = "27" *) 
+  (* ram_slice_end = "27" *) 
   RAM32X1S #(
     .INIT(32'h00000E10)) 
     ram_reg_0_31_27_27
@@ -854,6 +994,13 @@ module inst_ram_spram
         .O(spo[27]),
         .WCLK(clk),
         .WE(we));
+  (* RTL_RAM_BITS = "1024" *) 
+  (* RTL_RAM_NAME = "synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram" *) 
+  (* ram_addr_begin = "0" *) 
+  (* ram_addr_end = "31" *) 
+  (* ram_offset = "0" *) 
+  (* ram_slice_begin = "28" *) 
+  (* ram_slice_end = "28" *) 
   RAM32X1S #(
     .INIT(32'h00000A00)) 
     ram_reg_0_31_28_28
@@ -866,6 +1013,13 @@ module inst_ram_spram
         .O(spo[28]),
         .WCLK(clk),
         .WE(we));
+  (* RTL_RAM_BITS = "1024" *) 
+  (* RTL_RAM_NAME = "synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram" *) 
+  (* ram_addr_begin = "0" *) 
+  (* ram_addr_end = "31" *) 
+  (* ram_offset = "0" *) 
+  (* ram_slice_begin = "29" *) 
+  (* ram_slice_end = "29" *) 
   RAM32X1S #(
     .INIT(32'h00000410)) 
     ram_reg_0_31_29_29
@@ -878,6 +1032,13 @@ module inst_ram_spram
         .O(spo[29]),
         .WCLK(clk),
         .WE(we));
+  (* RTL_RAM_BITS = "1024" *) 
+  (* RTL_RAM_NAME = "synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram" *) 
+  (* ram_addr_begin = "0" *) 
+  (* ram_addr_end = "31" *) 
+  (* ram_offset = "0" *) 
+  (* ram_slice_begin = "2" *) 
+  (* ram_slice_end = "2" *) 
   RAM32X1S #(
     .INIT(32'h000007F7)) 
     ram_reg_0_31_2_2
@@ -890,6 +1051,13 @@ module inst_ram_spram
         .O(spo[2]),
         .WCLK(clk),
         .WE(we));
+  (* RTL_RAM_BITS = "1024" *) 
+  (* RTL_RAM_NAME = "synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram" *) 
+  (* ram_addr_begin = "0" *) 
+  (* ram_addr_end = "31" *) 
+  (* ram_offset = "0" *) 
+  (* ram_slice_begin = "30" *) 
+  (* ram_slice_end = "30" *) 
   RAM32X1S #(
     .INIT(32'h00000A00)) 
     ram_reg_0_31_30_30
@@ -902,6 +1070,13 @@ module inst_ram_spram
         .O(spo[30]),
         .WCLK(clk),
         .WE(we));
+  (* RTL_RAM_BITS = "1024" *) 
+  (* RTL_RAM_NAME = "synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram" *) 
+  (* ram_addr_begin = "0" *) 
+  (* ram_addr_end = "31" *) 
+  (* ram_offset = "0" *) 
+  (* ram_slice_begin = "31" *) 
+  (* ram_slice_end = "31" *) 
   RAM32X1S #(
     .INIT(32'h00000000)) 
     ram_reg_0_31_31_31
@@ -914,6 +1089,13 @@ module inst_ram_spram
         .O(spo[31]),
         .WCLK(clk),
         .WE(we));
+  (* RTL_RAM_BITS = "1024" *) 
+  (* RTL_RAM_NAME = "synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram" *) 
+  (* ram_addr_begin = "0" *) 
+  (* ram_addr_end = "31" *) 
+  (* ram_offset = "0" *) 
+  (* ram_slice_begin = "3" *) 
+  (* ram_slice_end = "3" *) 
   RAM32X1S #(
     .INIT(32'h000004EB)) 
     ram_reg_0_31_3_3
@@ -926,6 +1108,13 @@ module inst_ram_spram
         .O(spo[3]),
         .WCLK(clk),
         .WE(we));
+  (* RTL_RAM_BITS = "1024" *) 
+  (* RTL_RAM_NAME = "synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram" *) 
+  (* ram_addr_begin = "0" *) 
+  (* ram_addr_end = "31" *) 
+  (* ram_offset = "0" *) 
+  (* ram_slice_begin = "4" *) 
+  (* ram_slice_end = "4" *) 
   RAM32X1S #(
     .INIT(32'h0000010C)) 
     ram_reg_0_31_4_4
@@ -938,6 +1127,13 @@ module inst_ram_spram
         .O(spo[4]),
         .WCLK(clk),
         .WE(we));
+  (* RTL_RAM_BITS = "1024" *) 
+  (* RTL_RAM_NAME = "synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram" *) 
+  (* ram_addr_begin = "0" *) 
+  (* ram_addr_end = "31" *) 
+  (* ram_offset = "0" *) 
+  (* ram_slice_begin = "5" *) 
+  (* ram_slice_end = "5" *) 
   RAM32X1S #(
     .INIT(32'h00000340)) 
     ram_reg_0_31_5_5
@@ -950,6 +1146,13 @@ module inst_ram_spram
         .O(spo[5]),
         .WCLK(clk),
         .WE(we));
+  (* RTL_RAM_BITS = "1024" *) 
+  (* RTL_RAM_NAME = "synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram" *) 
+  (* ram_addr_begin = "0" *) 
+  (* ram_addr_end = "31" *) 
+  (* ram_offset = "0" *) 
+  (* ram_slice_begin = "6" *) 
+  (* ram_slice_end = "6" *) 
   RAM32X1S #(
     .INIT(32'h00000380)) 
     ram_reg_0_31_6_6
@@ -962,6 +1165,13 @@ module inst_ram_spram
         .O(spo[6]),
         .WCLK(clk),
         .WE(we));
+  (* RTL_RAM_BITS = "1024" *) 
+  (* RTL_RAM_NAME = "synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram" *) 
+  (* ram_addr_begin = "0" *) 
+  (* ram_addr_end = "31" *) 
+  (* ram_offset = "0" *) 
+  (* ram_slice_begin = "7" *) 
+  (* ram_slice_end = "7" *) 
   RAM32X1S #(
     .INIT(32'h000003E0)) 
     ram_reg_0_31_7_7
@@ -974,6 +1184,13 @@ module inst_ram_spram
         .O(spo[7]),
         .WCLK(clk),
         .WE(we));
+  (* RTL_RAM_BITS = "1024" *) 
+  (* RTL_RAM_NAME = "synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram" *) 
+  (* ram_addr_begin = "0" *) 
+  (* ram_addr_end = "31" *) 
+  (* ram_offset = "0" *) 
+  (* ram_slice_begin = "8" *) 
+  (* ram_slice_end = "8" *) 
   RAM32X1S #(
     .INIT(32'h000008E0)) 
     ram_reg_0_31_8_8
@@ -986,6 +1203,13 @@ module inst_ram_spram
         .O(spo[8]),
         .WCLK(clk),
         .WE(we));
+  (* RTL_RAM_BITS = "1024" *) 
+  (* RTL_RAM_NAME = "synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram" *) 
+  (* ram_addr_begin = "0" *) 
+  (* ram_addr_end = "31" *) 
+  (* ram_offset = "0" *) 
+  (* ram_slice_begin = "9" *) 
+  (* ram_slice_end = "9" *) 
   RAM32X1S #(
     .INIT(32'h00000B00)) 
     ram_reg_0_31_9_9
