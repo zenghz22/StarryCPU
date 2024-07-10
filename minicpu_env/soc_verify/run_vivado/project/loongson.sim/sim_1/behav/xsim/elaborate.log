@@ -3,7 +3,13 @@ Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
 Running: C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto d0f23ecf3828469d9e6683a630e32abf --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_13 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
+<<<<<<< HEAD
 Pass Through NonSizing Optimizer
 ERROR: [VRFC 10-2063] Module <clk_wiz_0> not found while processing module instance <pll.clk_pll> [C:/longxin/StarryCPU/minicpu_env/soc_verify/rtl/soc_mini_top.v:87]
 ERROR: [VRFC 10-2865] module 'dist_mem_gen_v8_0_13(C_FAMILY="artix7",C_ADDR_WIDTH=5,C_DEPTH=32,C_MEM_INIT_FILE="inst_ram.mif",C_READ_MIF=1,C_SYNC_ENABLE=1,C_WIDTH=32)' ignored due to previous errors [/wrk/2019.2/continuous/2019_11_06_2708876/packages/customer/vivado/data/ip/xilinx/dist_mem_gen_v8_0/simulation/dist_mem_gen_v8_0.v:78]
 ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+=======
+WARNING: [VRFC 10-278] actual bit length 16 differs from formal bit length 5 for port a [D:/1Learn/24Summer/Lxb/StarryCPU/minicpu_env/soc_verify/rtl/soc_mini_top.v:147]
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+>>>>>>> 1d7a6718f1be1547d29186d048df26809c52359c

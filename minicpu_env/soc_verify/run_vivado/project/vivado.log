@@ -1,0 +1,78 @@
+#-----------------------------------------------------------
+# Vivado v2017.3 (64-bit)
+# SW Build 2018833 on Wed Oct  4 19:58:22 MDT 2017
+# IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
+# Start of session at: Mon Jul  8 01:21:16 2024
+# Process ID: 28844
+# Current directory: D:/1Learn/24Summer/Lxb/StarryCPU/minicpu_env/soc_verify/run_vivado/project
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent29868 D:\1Learn\24Summer\Lxb\StarryCPU\minicpu_env\soc_verify\run_vivado\project\loongson.xpr
+# Log file: D:/1Learn/24Summer/Lxb/StarryCPU/minicpu_env/soc_verify/run_vivado/project/vivado.log
+# Journal file: D:/1Learn/24Summer/Lxb/StarryCPU/minicpu_env/soc_verify/run_vivado/project\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/1Learn/24Summer/Lxb/StarryCPU/minicpu_env/soc_verify/run_vivado/project/loongson.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Vivado/Vivado/2017.3/data/ip'.
+WARNING: [IP_Flow 19-2162] IP 'clk_pll' is locked:
+* IP definition 'Clocking Wizard (6.0)' for IP 'clk_pll' (customized with software release 2019.2) was not found in the IP Catalog.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+update_compile_order -fileset sources_1
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/1Learn/24Summer/Lxb/StarryCPU/minicpu_env/soc_verify/run_vivado/project/loongson.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Vivado/Vivado/2017.3/data/xsim/ip/xsim_ip.ini' copied to run dir:'D:/1Learn/24Summer/Lxb/StarryCPU/minicpu_env/soc_verify/run_vivado/project/loongson.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_top' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'D:/1Learn/24Summer/Lxb/StarryCPU/minicpu_env/soc_verify/run_vivado/project/loongson.sim/sim_1/behav/xsim/inst_ram.mif'
+INFO: [SIM-utils-43] Exported 'D:/1Learn/24Summer/Lxb/StarryCPU/minicpu_env/soc_verify/run_vivado/project/loongson.sim/sim_1/behav/xsim/inst_ram.coe'
+WARNING: [SIM-utils-52] IP component XML file does not exist: 'd:/1Learn/24Summer/Lxb/StarryCPU/minicpu_env/soc_verify/rtl/xilinx_ip/clk_pll/clk_pll.xml'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/1Learn/24Summer/Lxb/StarryCPU/minicpu_env/soc_verify/run_vivado/project/loongson.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_top_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/1Learn/24Summer/Lxb/StarryCPU/minicpu_env/soc_verify/run_vivado/project/loongson.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.3
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: D:/Vivado/Vivado/2017.3/bin/unwrapped/win64.o/xelab.exe -wto 947fcfa4e02d4d379196a16dc94056c4 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L dist_mem_gen_v8_0_12 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 16 differs from formal bit length 5 for port a [D:/1Learn/24Summer/Lxb/StarryCPU/minicpu_env/soc_verify/rtl/soc_mini_top.v:147]
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/1Learn/24Summer/Lxb/StarryCPU/minicpu_env/soc_verify/run_vivado/project/loongson.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_top_behav -key {Behavioral:sim_1:Functional:tb_top} -tclbatch {tb_top.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.3
+Time resolution is 1 ps
+source tb_top.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# log_wave -r /
+# run 1000ns
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_top_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 867.922 ; gain = 1.309
+run 5 us
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Jul  8 02:00:40 2024...
