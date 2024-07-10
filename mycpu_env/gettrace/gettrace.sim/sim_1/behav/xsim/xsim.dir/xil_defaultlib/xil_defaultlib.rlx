@@ -1,0 +1,10 @@
+0.7
+2020.2
+May 22 2024
+19:03:11
+D:/1Learn/24Summer/Lxb/StarryCPU/mycpu_env/gettrace/gettrace.sim/sim_1/behav/xsim/glbl.v,1708598507,verilog,,,,glbl,,,,,,,,
+D:/1Learn/24Summer/Lxb/StarryCPU/mycpu_env/gettrace/src/BRIDGE/bridge_1x2.v,1704077910,verilog,,D:/1Learn/24Summer/Lxb/StarryCPU/mycpu_env/gettrace/src/CONFREG/confreg.v,,bridge_1x2,,,,,,,,
+D:/1Learn/24Summer/Lxb/StarryCPU/mycpu_env/gettrace/src/CONFREG/confreg.v,1704077910,verilog,,D:/1Learn/24Summer/Lxb/StarryCPU/mycpu_env/gettrace/src/soc_lite_top.v,,confreg,,,,,,,,
+D:/1Learn/24Summer/Lxb/StarryCPU/mycpu_env/gettrace/src/myCPU/SimpleLACoreWrapRAM.v,1704077910,verilog,,D:/1Learn/24Summer/Lxb/StarryCPU/mycpu_env/gettrace/src/BRIDGE/bridge_1x2.v,,SimpleLACore;SimpleLACoreWrapRAM,,,,,,,,
+D:/1Learn/24Summer/Lxb/StarryCPU/mycpu_env/gettrace/src/soc_lite_top.v,1704077910,verilog,,D:/1Learn/24Summer/Lxb/StarryCPU/mycpu_env/gettrace/src/tb_top.v,,soc_lite_top,,,,,,,,
+D:/1Learn/24Summer/Lxb/StarryCPU/mycpu_env/gettrace/src/tb_top.v,1704077910,verilog,,,,tb_top,,,,,,,,
