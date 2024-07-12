@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Fri Jul 12 19:03:57 2024
+# Process ID: 24996
+# Current directory: D:/1Learn/24Summer/Lxb/StarryCPU/mycpu_env/soc_verify/soc_dram/run_vivado/project/loongson.runs/inst_ram_synth_1
+# Command line: vivado.exe -log inst_ram.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source inst_ram.tcl
+# Log file: D:/1Learn/24Summer/Lxb/StarryCPU/mycpu_env/soc_verify/soc_dram/run_vivado/project/loongson.runs/inst_ram_synth_1/inst_ram.vds
+# Journal file: D:/1Learn/24Summer/Lxb/StarryCPU/mycpu_env/soc_verify/soc_dram/run_vivado/project/loongson.runs/inst_ram_synth_1\vivado.jou
+# Running On        :LAPTOP-76HLJIEN
+# Platform          :Windows Server 2016 or Windows 10
+# Operating System  :19043
+# Processor Detail  :AMD Ryzen 7 5800H with Radeon Graphics         
+# CPU Frequency     :3194 MHz
+# CPU Physical cores:8
+# CPU Logical cores :16
+# Host memory       :16487 MB
+# Swap memory       :6442 MB
+# Total Virtual     :22930 MB
+# Available Virtual :7652 MB
+#-----------------------------------------------------------
+source inst_ram.tcl -notrace

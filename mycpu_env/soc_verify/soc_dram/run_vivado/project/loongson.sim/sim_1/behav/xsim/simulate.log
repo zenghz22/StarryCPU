@@ -1,0 +1,25 @@
+Time resolution is 1 ps
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+==============================================================
+Test begin!
+WARNING in tb_top.soc_lite.data_ram.inst at time              2055000 ns: 
+Reading from out-of-range address. Max address in tb_top.soc_lite.data_ram.inst is        1023
+WARNING in tb_top.soc_lite.data_ram.inst at time              2065000 ns: 
+Reading from out-of-range address. Max address in tb_top.soc_lite.data_ram.inst is        1023
+WARNING in tb_top.soc_lite.data_ram.inst at time              2085000 ns: 
+Reading from out-of-range address. Max address in tb_top.soc_lite.data_ram.inst is        1023
+WARNING in tb_top.soc_lite.data_ram.inst at time              2105000 ns: 
+Reading from out-of-range address. Max address in tb_top.soc_lite.data_ram.inst is        1023
+WARNING in tb_top.soc_lite.data_ram.inst at time              2125000 ns: 
+Reading from out-of-range address. Max address in tb_top.soc_lite.data_ram.inst is        1023
+WARNING in tb_top.soc_lite.data_ram.inst at time              2185000 ns: 
+Reading from out-of-range address. Max address in tb_top.soc_lite.data_ram.inst is        1023
+--------------------------------------------------------------
+[   2267 ns] Error!!!
+    reference: PC = 0x1c010050, wb_rf_wnum = 0x01, wb_rf_wdata = 0x1c010054
+    mycpu    : PC = 0x1c017990, wb_rf_wnum = 0x17, wb_rf_wdata = 0x00000001
+--------------------------------------------------------------
+WARNING in tb_top.soc_lite.data_ram.inst at time              2295000 ns: 
+Reading from out-of-range address. Max address in tb_top.soc_lite.data_ram.inst is        1023
+$finish called at time : 2307 ns : File "D:/1Learn/24Summer/Lxb/StarryCPU/mycpu_env/soc_verify/soc_dram/testbench/mycpu_tb.v" Line 168
