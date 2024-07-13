@@ -1,0 +1,12 @@
+mycpu_top.v
+253行 .alu_src1   (alu_src2  )，2应该改成1
+263行 final_result未定义
+271行 debug_wb_rf_wen命名错误
+
+alu.v
+74行 | alu_result冗余
+80行 移位操作的alu_src1与alu_src2写反了
+83行 移位操作的alu_src1与alu_src2写反了
+85行 sr64_result[30:0]应该为sr64_result[31:0]
+
+——by 启明芯小组
