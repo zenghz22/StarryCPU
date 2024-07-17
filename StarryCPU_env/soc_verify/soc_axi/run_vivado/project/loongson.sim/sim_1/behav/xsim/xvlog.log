@@ -1,0 +1,4 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/StarryCPU-main/mycpu_env/soc_verify/soc_axi/run_vivado/project/loongson.ip_user_files/ip/tagv_sram/sim/tagv_sram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tagv_sram
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/StarryCPU-main/mycpu_env/soc_verify/soc_axi/run_vivado/project/loongson.ip_user_files/ip/data_bank_sram/sim/data_bank_sram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module data_bank_sram

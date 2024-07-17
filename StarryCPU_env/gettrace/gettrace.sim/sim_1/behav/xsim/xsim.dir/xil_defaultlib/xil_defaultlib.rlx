@@ -1,0 +1,10 @@
+0.6
+2019.2
+Nov  6 2019
+21:57:16
+C:/StarryCPU-main/mycpu_env/gettrace/gettrace.sim/sim_1/behav/xsim/glbl.v,1573089660,verilog,,,,glbl,,,,,,,,
+C:/StarryCPU-main/mycpu_env/gettrace/src/BRIDGE/bridge_1x2.v,1720610824,verilog,,C:/StarryCPU-main/mycpu_env/gettrace/src/CONFREG/confreg.v,,bridge_1x2,,,,,,,,
+C:/StarryCPU-main/mycpu_env/gettrace/src/CONFREG/confreg.v,1720610824,verilog,,C:/StarryCPU-main/mycpu_env/gettrace/src/soc_lite_top.v,,confreg,,,,,,,,
+C:/StarryCPU-main/mycpu_env/gettrace/src/myCPU/SimpleLACoreWrapRAM.v,1720610824,verilog,,C:/StarryCPU-main/mycpu_env/gettrace/src/BRIDGE/bridge_1x2.v,,SimpleLACore;SimpleLACoreWrapRAM,,,,,,,,
+C:/StarryCPU-main/mycpu_env/gettrace/src/soc_lite_top.v,1720610824,verilog,,C:/StarryCPU-main/mycpu_env/gettrace/src/tb_top.v,,soc_lite_top,,,,,,,,
+C:/StarryCPU-main/mycpu_env/gettrace/src/tb_top.v,1720610824,verilog,,,,tb_top,,,,,,,,

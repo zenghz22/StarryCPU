@@ -1,0 +1,105 @@
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 41944a2fe8984aa09c925602cd3f9522 --incr --debug typical --relax --mt 2 -L blk_mem_gen_v8_4_4 -L xil_defaultlib -L generic_baseblocks_v2_1_0 -L axi_infrastructure_v1_1_0 -L axi_register_slice_v2_1_20 -L fifo_generator_v13_2_5 -L axi_data_fifo_v2_1_19 -L axi_crossbar_v2_1_21 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 64 for port 'ws_timer_64_diff' [C:/StarryCPU-main/mycpu_env/myCPU/mycpu_top.v:614]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 8 for port 'ws_inst_ld_en_diff' [C:/StarryCPU-main/mycpu_env/myCPU/mycpu_top.v:615]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'ws_ld_paddr_diff' [C:/StarryCPU-main/mycpu_env/myCPU/mycpu_top.v:616]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'ws_ld_vaddr_diff' [C:/StarryCPU-main/mycpu_env/myCPU/mycpu_top.v:617]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 8 for port 'ws_inst_st_en_diff' [C:/StarryCPU-main/mycpu_env/myCPU/mycpu_top.v:618]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'ws_st_paddr_diff' [C:/StarryCPU-main/mycpu_env/myCPU/mycpu_top.v:619]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'ws_st_vaddr_diff' [C:/StarryCPU-main/mycpu_env/myCPU/mycpu_top.v:620]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'ws_st_data_diff' [C:/StarryCPU-main/mycpu_env/myCPU/mycpu_top.v:621]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'ws_csr_data_diff' [C:/StarryCPU-main/mycpu_env/myCPU/mycpu_top.v:623]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'csr_crmd_diff' [C:/StarryCPU-main/mycpu_env/myCPU/mycpu_top.v:691]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'csr_prmd_diff' [C:/StarryCPU-main/mycpu_env/myCPU/mycpu_top.v:692]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'csr_ectl_diff' [C:/StarryCPU-main/mycpu_env/myCPU/mycpu_top.v:693]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'csr_estat_diff' [C:/StarryCPU-main/mycpu_env/myCPU/mycpu_top.v:694]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'csr_era_diff' [C:/StarryCPU-main/mycpu_env/myCPU/mycpu_top.v:695]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'csr_badv_diff' [C:/StarryCPU-main/mycpu_env/myCPU/mycpu_top.v:696]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'csr_eentry_diff' [C:/StarryCPU-main/mycpu_env/myCPU/mycpu_top.v:697]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'csr_tlbidx_diff' [C:/StarryCPU-main/mycpu_env/myCPU/mycpu_top.v:698]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'csr_tlbehi_diff' [C:/StarryCPU-main/mycpu_env/myCPU/mycpu_top.v:699]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'csr_tlbelo0_diff' [C:/StarryCPU-main/mycpu_env/myCPU/mycpu_top.v:700]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'csr_tlbelo1_diff' [C:/StarryCPU-main/mycpu_env/myCPU/mycpu_top.v:701]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'csr_asid_diff' [C:/StarryCPU-main/mycpu_env/myCPU/mycpu_top.v:702]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'csr_save0_diff' [C:/StarryCPU-main/mycpu_env/myCPU/mycpu_top.v:703]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'csr_save1_diff' [C:/StarryCPU-main/mycpu_env/myCPU/mycpu_top.v:704]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'csr_save2_diff' [C:/StarryCPU-main/mycpu_env/myCPU/mycpu_top.v:705]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'csr_save3_diff' [C:/StarryCPU-main/mycpu_env/myCPU/mycpu_top.v:706]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'csr_tid_diff' [C:/StarryCPU-main/mycpu_env/myCPU/mycpu_top.v:707]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'csr_tcfg_diff' [C:/StarryCPU-main/mycpu_env/myCPU/mycpu_top.v:708]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'csr_tval_diff' [C:/StarryCPU-main/mycpu_env/myCPU/mycpu_top.v:709]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'csr_ticlr_diff' [C:/StarryCPU-main/mycpu_env/myCPU/mycpu_top.v:710]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'csr_llbctl_diff' [C:/StarryCPU-main/mycpu_env/myCPU/mycpu_top.v:711]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'csr_tlbrentry_diff' [C:/StarryCPU-main/mycpu_env/myCPU/mycpu_top.v:712]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'csr_dmw0_diff' [C:/StarryCPU-main/mycpu_env/myCPU/mycpu_top.v:713]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'csr_dmw1_diff' [C:/StarryCPU-main/mycpu_env/myCPU/mycpu_top.v:714]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'csr_pgdl_diff' [C:/StarryCPU-main/mycpu_env/myCPU/mycpu_top.v:715]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'csr_pgdh_diff' [C:/StarryCPU-main/mycpu_env/myCPU/mycpu_top.v:716]
+WARNING: [VRFC 10-3091] actual bit length 5 differs from formal bit length 4 for port 'w_index' [C:/StarryCPU-main/mycpu_env/myCPU/addr_trans.v:189]
+WARNING: [VRFC 10-3091] actual bit length 5 differs from formal bit length 4 for port 'r_index' [C:/StarryCPU-main/mycpu_env/myCPU/addr_trans.v:206]
+WARNING: [VRFC 10-3091] actual bit length 4 differs from formal bit length 5 for port 'out' [C:/StarryCPU-main/mycpu_env/myCPU/tlb_entry.v:113]
+WARNING: [VRFC 10-3091] actual bit length 4 differs from formal bit length 5 for port 'out' [C:/StarryCPU-main/mycpu_env/myCPU/tlb_entry.v:114]
+WARNING: [VRFC 10-3091] actual bit length 4 differs from formal bit length 8 for port 'arlen' [C:/StarryCPU-main/mycpu_env/soc_verify/soc_axi/rtl/soc_lite_top.v:557]
+WARNING: [VRFC 10-3091] actual bit length 4 differs from formal bit length 8 for port 'awlen' [C:/StarryCPU-main/mycpu_env/soc_verify/soc_axi/rtl/soc_lite_top.v:573]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.if_stage
+Compiling module xil_defaultlib.decoder_6_64
+Compiling module xil_defaultlib.decoder_4_16
+Compiling module xil_defaultlib.decoder_2_4
+Compiling module xil_defaultlib.decoder_5_32
+Compiling module xil_defaultlib.regfile
+Compiling module xil_defaultlib.id_stage
+Compiling module xil_defaultlib.alu
+Compiling module xil_defaultlib.exe_stage
+Compiling module xil_defaultlib.div
+Compiling module xil_defaultlib.YDecoder
+Compiling module xil_defaultlib.BoothBase
+Compiling module xil_defaultlib.BoothInterBase_default
+Compiling module xil_defaultlib.addr
+Compiling module xil_defaultlib.WallaceTreeBase
+Compiling module xil_defaultlib.mul_default
+Compiling module xil_defaultlib.mem_stage
+Compiling module xil_defaultlib.wb_stage
+Compiling module xil_defaultlib.csr(TLBNUM=16)
+Compiling module xil_defaultlib.axi_bridge
+Compiling module xil_defaultlib.encoder_4_2
+Compiling module xil_defaultlib.encoder_16_4
+Compiling module xil_defaultlib.encoder_32_5
+Compiling module xil_defaultlib.tlb_entry(TLBNUM=16)
+Compiling module xil_defaultlib.addr_trans(TLBNUM=16)
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4_output_stage(...
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4_output_stage(...
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4_softecc_outpu...
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4(C_FAMILY="art...
+Compiling module xil_defaultlib.data_bank_sram
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4_output_stage(...
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4_output_stage(...
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4_softecc_outpu...
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4(C_FAMILY="art...
+Compiling module xil_defaultlib.tagv_sram
+Compiling module xil_defaultlib.lfsr
+Compiling module xil_defaultlib.icache
+Compiling module xil_defaultlib.dcache
+Compiling module xil_defaultlib.one_valid_32
+Compiling module xil_defaultlib.btb_default
+Compiling module xil_defaultlib.perf_counter
+Compiling module xil_defaultlib.mycpu_top
+Compiling module xil_defaultlib.axi_wrap
+Compiling module xil_defaultlib.axi_crossbar_1x2
+Compiling module xil_defaultlib.axi_ram
+Compiling module xil_defaultlib.axi_wrap_ram
+Compiling module xil_defaultlib.confreg(SIMULATION=1'b1)
+Compiling module xil_defaultlib.soc_lite_top(SIMULATION=1'b1)
+Compiling module xil_defaultlib.tb_top
+WARNING: [XSIM 43-3373] "C:/StarryCPU-main/mycpu_env/soc_verify/soc_axi/testbench/mycpu_tb.v" Line 124. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_top_behav
