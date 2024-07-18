@@ -1,10 +1,11 @@
--- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+-- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+-- Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
--- Date        : Tue Jul 16 22:18:20 2024
--- Host        : KCN running 64-bit major release  (build 9200)
+-- Tool Version: Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
+-- Date        : Wed Jul 17 18:17:18 2024
+-- Host        : LAPTOP-76HLJIEN running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
---               C:/StarryCPU-main/mycpu_env/soc_verify/soc_axi/rtl/xilinx_ip/clk_pll/clk_pll_sim_netlist.vhdl
+--               d:/1Learn/24Summer/Lxb/StarryCPU/StarryCPU_env/soc_verify/soc_axi/rtl/xilinx_ip/clk_pll/clk_pll_sim_netlist.vhdl
 -- Design      : clk_pll
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -14,17 +15,15 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity clk_pll_clk_pll_clk_wiz is
+entity clk_pll_clk_wiz is
   port (
     cpu_clk : out STD_LOGIC;
     timer_clk : out STD_LOGIC;
     clk_in1 : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of clk_pll_clk_pll_clk_wiz : entity is "clk_pll_clk_wiz";
-end clk_pll_clk_pll_clk_wiz;
+end clk_pll_clk_wiz;
 
-architecture STRUCTURE of clk_pll_clk_pll_clk_wiz is
+architecture STRUCTURE of clk_pll_clk_wiz is
   signal clk_in1_clk_pll : STD_LOGIC;
   signal clkfbout_buf_clk_pll : STD_LOGIC;
   signal clkfbout_clk_pll : STD_LOGIC;
@@ -147,7 +146,7 @@ end clk_pll;
 
 architecture STRUCTURE of clk_pll is
 begin
-inst: entity work.clk_pll_clk_pll_clk_wiz
+inst: entity work.clk_pll_clk_wiz
      port map (
       clk_in1 => clk_in1,
       cpu_clk => cpu_clk,

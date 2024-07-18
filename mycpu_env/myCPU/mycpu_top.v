@@ -1,15 +1,14 @@
-//if_id_inst
 module mycpu_top(
   input  wire        clk,
   input  wire        resetn,
   // inst sram interface
-  output wire        inst_sram_en
+  output wire        inst_sram_en,
   output wire [3:0]  inst_sram_we,
   output wire [31:0] inst_sram_addr,
   output wire [31:0] inst_sram_wdata,
   input  wire [31:0] inst_sram_rdata,
   // data sram interface
-  output wire        data_sram_en 
+  output wire        data_sram_en, 
   output wire [3:0]  data_sram_we,
   output wire [31:0] data_sram_addr,
   output wire [31:0] data_sram_wdata,
@@ -19,11 +18,12 @@ module mycpu_top(
   output wire [ 3:0] debug_wb_rf_we,
   output wire [ 4:0] debug_wb_rf_wnum,
   output wire [31:0] debug_wb_rf_wdata
-)；
-reg reset；
+);
+
+reg reset;
+reg valid;
 always @(posedge clk) reset <= ~resetn;
 
-reg valid
 always @(posedge clk) begin
     if (reset) begin
         valid <= 1'b0;
@@ -33,25 +33,23 @@ always @(posedge clk) begin
     end
 end
 
-
-// IF Stage
-reg  [31:0] if_pc;
-wire [31:0] seq_pc;
-wire [31:0] nextpc;
-assign seq_pc       = pc + 3'h4;
-assign nextpc       = br_taken ? br_target : seq_pc;
-
-always @(posedge clk) begin
-    if (reset)
-        if_pc <= 32'h1bfffffc;
-    else
-        if_pc <= nextpc;
-end
-
+//IF STAGE
+wire [31:0] if_pc;
+      
 assign inst_sram_we = 1'b0;
 assign inst_sram_addr = if_pc;
 assign inst_sram_wdata = 32'b0;
 
+if_stage if_stage(
+    .clk        (clk),
+    .reset      (reset),
+    .br_taken   (id_br_taken),
+    .br_target  (id_br_target),
+    .if_pc      (if_pc)
+);
+
+
+// IF/ID
 reg [31:0] if_id_pc;
 reg [31:0] if_id_inst;
 always @(posedge clk) begin
@@ -64,139 +62,201 @@ always @(posedge clk) begin
     end
 end
 
+//ID STAGE
+wire [31:0] id_pc;
+wire [31:0] id_inst;
+wire [11:0] id_alu_op;
+wire        id_load_op;
+wire        id_src2_is_imm;
+wire        id_res_from_mem;;
+wire        id_gr_we;
+wire        id_mem_we;
+wire [4:0]  id_dest;
+wire [31:0] id_rj_value;
+wire [31:0] id_rkd_value;
+wire [31:0] id_imm;
 
-//ID Stage
-reg  [31:0] id_pc;
-wire [11:0] i12;
-wire [19:0] i20;
-wire [15:0] i16;
-wire [25:0] i26;
+assign id_pc =if_id_pc;
+assign id_inst=if_id_inst;
+
+
+id_stage id_stage(
+    .clk            (clk),
+    .reset          (reset),
+    //输入 from IF/ID
+    .id_pc          (id_pc),
+    .id_inst        (id_inst),
+    //输入 from WB
+    .wb_gr_we       (wb_gr_we),
+    .wb_dest        (wb_dest),
+    .wb_final_result(wb_final_result),
+    //输出   to ID/EX
+    .alu_op         (id_alu_op),
+    .load_op        (id_load_op),
+    .src2_is_imm    (id_src2_is_imm),
+    .res_from_mem   (id_res_from_mem),
+    .gr_we          (id_gr_we),
+    .mem_we         (id_mem_we),
+    .dest           (id_dest),  //写回的寄存器编号
+    .rj_value       (id_rj_value),
+    .rkd_value      (id_rkd_value),
+    .imm            (id_imm)
+    //输出   to IF
+    . 
+);
+assign debug_wb_pc = wb_pc;
+assign debug_wb_rf_we =wb_gr_we;
+assign debug_wb_rf_wnum=wb_dest;
+assign debug_wb_rf_wdata=wb_final_result;
+
+//ID/EX
+reg [31:0]  id_ex_pc;
+reg [11:0]  id_ex_alu_op;
+reg         id_ex_load_op;
+reg         id_ex_src2_is_imm;
+reg         id_ex_res_from_mem;
+reg         id_ex_gr_we;
+reg         id_ex_mem_we;
+reg [4:0]   id_ex_dest;
+reg [31:0]  id_ex_rj_value;
+reg [31:0]  id_ex_rkd_value;
+reg [31:0]  id_ex_imm;
 
 always @(posedge clk) begin
-      id_pc <= if_id_pc;
-      i12 <= if_id_inst[21:10];
-      i20 <= if_id_inst[24: 5];
-      i16 <= if_id_inst[25:10];
-      i26 <= {if_id_inst[ 9: 0], if_id_inst[25:10]};
+    if (reset) begin
+
+        id_ex_alu_op <= 0;  
+        id_ex_load_op <= 0;  
+        id_ex_src2_is_imm <= 0;  
+        id_ex_res_from_mem <= 0;  
+        id_ex_gr_we <= 0;  
+        id_ex_mem_we <= 0;   
+        id_ex_dest <= 0;  
+        id_ex_rj_value <= 0;  
+        id_ex_rkd_value <= 0;  
+        id_ex_imm <= 0;  
+    end else begin
+        id_ex_pc <= id_pc;
+        id_ex_alu_op <= id_alu_op;  
+        id_ex_load_op <= id_load_op;  
+        id_ex_src2_is_imm <= id_src2_is_imm;  
+        id_ex_res_from_mem <= id_res_from_mem;   
+        id_ex_gr_we <= id_gr_we;  
+        id_ex_mem_we <= id_mem_we;   
+        id_ex_dest <= id_dest;  
+        id_ex_rj_value <= id_rj_value;  
+        id_ex_rkd_value <= id_rkd_value;  
+        id_ex_imm <= id_imm;  
+    end
+end
+//EX STAGE
+wire [31:0] ex_pc;
+wire [31:0] ex_alu_result;
+wire [31:0] ex_rkd_value;
+wire [4:0 ] ex_dest;
+wire        ex_res_from_mem;
+wire        ex_gr_we;
+wire        ex_mem_we ;
+assign      ex_rkd_value = id_ex_rkd_value;
+assign      ex_pc        = id_ex_pc;
+assign      ex_res_from_mem=id_ex_res_from_mem;
+assign      ex_gr_we     = id_ex_gr_we;
+assign      ex_mem_we    = id_ex_mem_we;
+assign      ex_dest      =id_ex_dest;
+
+alu alu(
+  //输入 from ID/EX
+  .alu_op(id_ex_alu_op),
+  .alu_src1(id_ex_rj_value),
+  .alu_src2(id_ex_src2_is_imm?id_ex_imm:id_ex_rkd_value),
+  //输出   to EX/MEM
+  .alu_result(ex_alu_result)
+);
+ 
+// EX/MEM
+reg [31:0]   ex_mem_pc;
+reg [31:0]   ex_mem_alu_result;
+reg [31:0]   ex_mem_rkd_value;
+reg          ex_mem_res_from_mem;
+reg          ex_mem_gr_we;
+reg          ex_mem_mem_we ;
+reg [4:0]    ex_mem_dest;
+always @(posedge clk) begin
+    if (reset) begin
+        ex_mem_alu_result<=0;
+        ex_mem_rkd_value<=0;
+        ex_mem_res_from_mem<=0;
+        ex_mem_gr_we<=0;
+        ex_mem_mem_we<=0;
+        ex_mem_dest<=0;
+    end else begin
+        ex_mem_pc<=ex_pc;
+        ex_mem_alu_result<=ex_alu_result;
+        ex_mem_rkd_value<=ex_rkd_value;
+        ex_mem_res_from_mem<=ex_res_from_mem;
+        ex_mem_gr_we<=ex_gr_we;
+        ex_mem_mem_we<=ex_mem_we;
+        ex_mem_dest<=ex_dest;  
+    end
 end
 
-
-wire [ 5:0] op_31_26;
-wire [ 3:0] op_25_22;
-wire [ 1:0] op_21_20;
-wire [ 4:0] op_19_15;
-wire [ 4:0] rd;
-wire [ 4:0] rj;
-wire [ 4:0] rk;
-
-wire [63:0] op_31_26_d;
-wire [15:0] op_25_22_d;
-wire [ 3:0] op_21_20_d;
-wire [31:0] op_19_15_d;
-
-wire [ 4:0] rf_raddr1;
-wire [31:0] rf_rdata1;
-wire [ 4:0] rf_raddr2;
-wire [31:0] rf_rdata2;
-wire        rf_we   ;
-wire [ 4:0] rf_waddr;
-wire [31:0] rf_wdata;
-
-wire        inst_add_w;
-wire        inst_sub_w;
-wire        inst_slt;
-wire        inst_sltu;
-wire        inst_nor;
-wire        inst_and;
-wire        inst_or;
-wire        inst_xor;
-wire        inst_slli_w;
-wire        inst_srli_w;
-wire        inst_srai_w;
-wire        inst_addi_w;
-wire        inst_ld_w;
-wire        inst_st_w;
-wire        inst_jirl;
-wire        inst_b;
-wire        inst_bl;
-wire        inst_beq;
-wire        inst_bne;
-wire        inst_lu12i_w;
-
-assign op_31_26  = if_id_inst[31:26];
-assign op_25_22  = if_id_inst[25:22];
-assign op_21_20  = if_id_inst[21:20];
-assign op_19_15  = if_id_inst[19:15];
-
-assign rd   = if_id_inst[ 4: 0];
-assign rj   = if_id_inst[ 9: 5];
-assign rk   = if_id_inst[14:10];
-
-decoder_6_64 u_dec0(.in(op_31_26 ), .out(op_31_26_d ));
-decoder_4_16 u_dec1(.in(op_25_22 ), .out(op_25_22_d ));
-decoder_2_4  u_dec2(.in(op_21_20 ), .out(op_21_20_d ));
-decoder_5_32 u_dec3(.in(op_19_15 ), .out(op_19_15_d ));
-
-assign inst_add_w  = op_31_26_d[6'h00] & op_25_22_d[4'h0] & op_21_20_d[2'h1] & op_19_15_d[5'h00];
-assign inst_sub_w  = op_31_26_d[6'h00] & op_25_22_d[4'h0] & op_21_20_d[2'h1] & op_19_15_d[5'h02];
-assign inst_slt    = op_31_26_d[6'h00] & op_25_22_d[4'h0] & op_21_20_d[2'h1] & op_19_15_d[5'h04];
-assign inst_sltu   = op_31_26_d[6'h00] & op_25_22_d[4'h0] & op_21_20_d[2'h1] & op_19_15_d[5'h05];
-assign inst_nor    = op_31_26_d[6'h00] & op_25_22_d[4'h0] & op_21_20_d[2'h1] & op_19_15_d[5'h08];
-assign inst_and    = op_31_26_d[6'h00] & op_25_22_d[4'h0] & op_21_20_d[2'h1] & op_19_15_d[5'h09];
-assign inst_or     = op_31_26_d[6'h00] & op_25_22_d[4'h0] & op_21_20_d[2'h1] & op_19_15_d[5'h0a];
-assign inst_xor    = op_31_26_d[6'h00] & op_25_22_d[4'h0] & op_21_20_d[2'h1] & op_19_15_d[5'h0b];
-assign inst_slli_w = op_31_26_d[6'h00] & op_25_22_d[4'h1] & op_21_20_d[2'h0] & op_19_15_d[5'h01];
-assign inst_srli_w = op_31_26_d[6'h00] & op_25_22_d[4'h1] & op_21_20_d[2'h0] & op_19_15_d[5'h09];
-assign inst_srai_w = op_31_26_d[6'h00] & op_25_22_d[4'h1] & op_21_20_d[2'h0] & op_19_15_d[5'h11];
-assign inst_addi_w = op_31_26_d[6'h00] & op_25_22_d[4'ha];
-assign inst_ld_w   = op_31_26_d[6'h0a] & op_25_22_d[4'h2];
-assign inst_st_w   = op_31_26_d[6'h0a] & op_25_22_d[4'h6];
-assign inst_jirl   = op_31_26_d[6'h13];
-assign inst_b      = op_31_26_d[6'h14];
-assign inst_bl     = op_31_26_d[6'h15];
-assign inst_beq    = op_31_26_d[6'h16];
-assign inst_bne    = op_31_26_d[6'h17];
-assign inst_lu12i_w= op_31_26_d[6'h05] & ~inst[25];
-
-regfile u_regfile(
-    .clk    (clk      ),
-    .raddr1 (rf_raddr1),
-    .rdata1 (rf_rdata1),
-    .raddr2 (rf_raddr2),
-    .rdata2 (rf_rdata2),
-    .we     (rf_we    ),
-    .waddr  (rf_waddr ),
-    .wdata  (rf_wdata )
-    );
-
-
-
-
-
-
-
-
-//级间寄存器存储(参考)
-//assign op_31_26  = inst[31:26];
-//assign rd   = inst[ 4: 0];
-
-// IF/ID Register
-reg [31:0] if_id_pc;
-reg [31:0] if_id_inst；
-
-// ID/EX Register
-reg  [31:0] id_ex_pc;
-reg [31:0] id_ex_rj_value;
-reg [31:0] id_ex_rkd_value;
-reg [31:0] id_ex_inst;
-
-// EX/MEM Register
-reg [31:0] ex_mem_pc;
-reg [31:0] ex_mem_rj_value;
-reg [31:0] ex_mem_rkd_value;
-reg [31:0] ex_mem_inst;
+//MEM STAGE
+wire [31:0] mem_pc;
+wire [31:0] mem_alu_result;
+wire [31:0] mem_rkd_value;
+wire        mem_res_from_mem;
+wire        mem_gr_we;
+wire        mem_mem_we ;
+wire [4:0]  mem_dest;
+assign      mem_rkd_value = ex_mem_rkd_value;
+assign      mem_pc        = ex_mem_pc;
+assign      mem_res_from_mem=ex_mem_res_from_mem;
+assign      mem_gr_we     = ex_mem_gr_we;
+assign      mem_mem_we    = ex_mem_mem_we;
+assign      mem_dest      = ex_mem_dest;
+assign      data_sram_we  = mem_mem_we;
+assign      data_sram_addr= mem_alu_result;
+assign      data_sram_wdata=mem_rkd_value;
+wire [31:0] mem_result; 
+assign      mem_result    =data_sram_rdata;
 
 // MEM/WB Register
 reg [31:0] mem_wb_pc;
-reg [31:0] mem_wb_inst;
+reg [31:0] mem_wb_alu_result;
+reg        mem_wb_res_from_mem;
+reg        mem_wb_gr_we;
+reg [4:0]  mem_wb_dest;
+reg [31:0] mem_wb_mem_result;
+always @(posedge clk) begin
+    if (reset) begin
+        mem_wb_alu_result<=0;
+        mem_wb_res_from_mem<=0;
+        mem_wb_gr_we<=0;
+        mem_wb_mem_result<=0;
+        mem_wb_dest<=0;
+    end else begin
+        mem_wb_alu_result<=mem_alu_result;
+        mem_wb_res_from_mem<=mem_res_from_mem;
+        mem_wb_gr_we<=0<=mem_gr_we;  
+        mem_wb_mem_result<=mem_result;
+        mem_wb_dest<=mem_dest;
+    end
+end
 
+//WB STAGE
+wire [31:0] wb_pc;
+wire [31:0] wb_alu_result;
+wire        wb_res_from_mem;
+wire        wb_gr_we;
+wire        wb_dest;
+wire [31:0] wb_mem_result;
+assign      wb_pc = mem_wb_pc;
+assign      wb_alu_result = mem_wb_alu_result;
+assign      wb_res_from_mem = mem_wb_res_from_mem;
+assign      wb_gr_we = mem_wb_gr_we;
+assign      wb_dest = mem_wb_dest;
+assign      wb_mem_result = mem_wb_mem_result;
+
+wire [31:0] wb_final_result;
+assign      wb_final_result = wb_res_from_mem?wb_mem_result:wb_alu_result;
+endmodule

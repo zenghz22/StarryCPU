@@ -1,53 +1,52 @@
-//  (c) Copyright 2019 Xilinx, Inc. All rights reserved.
+// (c) Copyright 2019, 2023 Advanced Micro Devices, Inc. All rights reserved.
 //
-//  This file contains confidential and proprietary information
-//  of Xilinx, Inc. and is protected under U.S. and
-//  international copyright and other intellectual property
-//  laws.
+// This file contains confidential and proprietary information
+// of AMD and is protected under U.S. and international copyright
+// and other intellectual property laws.
 //
-//  DISCLAIMER
-//  This disclaimer is not a license and does not grant any
-//  rights to the materials distributed herewith. Except as
-//  otherwise provided in a valid license issued to you by
-//  Xilinx, and to the maximum extent permitted by applicable
-//  law: (1) THESE MATERIALS ARE MADE AVAILABLE "AS IS" AND
-//  WITH ALL FAULTS, AND XILINX HEREBY DISCLAIMS ALL WARRANTIES
-//  AND CONDITIONS, EXPRESS, IMPLIED, OR STATUTORY, INCLUDING
-//  BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, NON-
-//  INFRINGEMENT, OR FITNESS FOR ANY PARTICULAR PURPOSE; and
-//  (2) Xilinx shall not be liable (whether in contract or tort,
-//  including negligence, or under any other theory of
-//  liability) for any loss or damage of any kind or nature
-//  related to, arising under or in connection with these
-//  materials, including for any direct, or any indirect,
-//  special, incidental, or consequential loss or damage
-//  (including loss of data, profits, goodwill, or any type of
-//  loss or damage suffered as a result of any action brought
-//  by a third party) even if such damage or loss was
-//  reasonably foreseeable or Xilinx had been advised of the
-//  possibility of the same.
+// DISCLAIMER
+// This disclaimer is not a license and does not grant any
+// rights to the materials distributed herewith. Except as
+// otherwise provided in a valid license issued to you by
+// AMD, and to the maximum extent permitted by applicable
+// law: (1) THESE MATERIALS ARE MADE AVAILABLE "AS IS" AND
+// WITH ALL FAULTS, AND AMD HEREBY DISCLAIMS ALL WARRANTIES
+// AND CONDITIONS, EXPRESS, IMPLIED, OR STATUTORY, INCLUDING
+// BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, NON-
+// INFRINGEMENT, OR FITNESS FOR ANY PARTICULAR PURPOSE; and
+// (2) AMD shall not be liable (whether in contract or tort,
+// including negligence, or under any other theory of
+// liability) for any loss or damage of any kind or nature
+// related to, arising under or in connection with these
+// materials, including for any direct, or any indirect,
+// special, incidental, or consequential loss or damage
+// (including loss of data, profits, goodwill, or any type of
+// loss or damage suffered as a result of any action brought
+// by a third party) even if such damage or loss was
+// reasonably foreseeable or AMD had been advised of the
+// possibility of the same.
 //
-//  CRITICAL APPLICATIONS
-//  Xilinx products are not designed or intended to be fail-
-//  safe, or for use in any application requiring fail-safe
-//  performance, such as life-support or safety devices or
-//  systems, Class III medical devices, nuclear facilities,
-//  applications related to the deployment of airbags, or any
-//  other applications that could lead to death, personal
-//  injury, or severe property or environmental damage
-//  (individually and collectively, "Critical
-//  Applications"). Customer assumes the sole risk and
-//  liability of any use of Xilinx products in Critical
-//  Applications, subject only to applicable laws and
-//  regulations governing limitations on product liability.
+// CRITICAL APPLICATIONS
+// AMD products are not designed or intended to be fail-
+// safe, or for use in any application requiring fail-safe
+// performance, such as life-support or safety devices or
+// systems, Class III medical devices, nuclear facilities,
+// applications related to the deployment of airbags, or any
+// other applications that could lead to death, personal
+// injury, or severe property or environmental damage
+// (individually and collectively, "Critical
+// Applications"). Customer assumes the sole risk and
+// liability of any use of AMD products in Critical
+// Applications, subject only to applicable laws and
+// regulations governing limitations on product liability.
 //
-//  THIS COPYRIGHT NOTICE AND DISCLAIMER MUST BE RETAINED AS
-//  PART OF THIS FILE AT ALL TIMES. 
-//-----------------------------------------------------------------------------
+// THIS COPYRIGHT NOTICE AND DISCLAIMER MUST BE RETAINED AS
+// PART OF THIS FILE AT ALL TIMES.
+////////////////////////////////////////////////////////////
 
 `timescale 1ps/1ps
 
-module axi_register_slice_v2_1_20_test_master #
+module axi_register_slice_v2_1_31_test_master #
   (
    parameter integer C_AXI_ID_WIDTH = 0,
    parameter integer C_AXI_ADDR_WIDTH = 32,
@@ -520,56 +519,55 @@ endmodule
 `default_nettype wire
 
 
-//  (c) Copyright 2019 Xilinx, Inc. All rights reserved.
+// (c) Copyright 2019, 2023 Advanced Micro Devices, Inc. All rights reserved.
 //
-//  This file contains confidential and proprietary information
-//  of Xilinx, Inc. and is protected under U.S. and
-//  international copyright and other intellectual property
-//  laws.
+// This file contains confidential and proprietary information
+// of AMD and is protected under U.S. and international copyright
+// and other intellectual property laws.
 //
-//  DISCLAIMER
-//  This disclaimer is not a license and does not grant any
-//  rights to the materials distributed herewith. Except as
-//  otherwise provided in a valid license issued to you by
-//  Xilinx, and to the maximum extent permitted by applicable
-//  law: (1) THESE MATERIALS ARE MADE AVAILABLE "AS IS" AND
-//  WITH ALL FAULTS, AND XILINX HEREBY DISCLAIMS ALL WARRANTIES
-//  AND CONDITIONS, EXPRESS, IMPLIED, OR STATUTORY, INCLUDING
-//  BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, NON-
-//  INFRINGEMENT, OR FITNESS FOR ANY PARTICULAR PURPOSE; and
-//  (2) Xilinx shall not be liable (whether in contract or tort,
-//  including negligence, or under any other theory of
-//  liability) for any loss or damage of any kind or nature
-//  related to, arising under or in connection with these
-//  materials, including for any direct, or any indirect,
-//  special, incidental, or consequential loss or damage
-//  (including loss of data, profits, goodwill, or any type of
-//  loss or damage suffered as a result of any action brought
-//  by a third party) even if such damage or loss was
-//  reasonably foreseeable or Xilinx had been advised of the
-//  possibility of the same.
+// DISCLAIMER
+// This disclaimer is not a license and does not grant any
+// rights to the materials distributed herewith. Except as
+// otherwise provided in a valid license issued to you by
+// AMD, and to the maximum extent permitted by applicable
+// law: (1) THESE MATERIALS ARE MADE AVAILABLE "AS IS" AND
+// WITH ALL FAULTS, AND AMD HEREBY DISCLAIMS ALL WARRANTIES
+// AND CONDITIONS, EXPRESS, IMPLIED, OR STATUTORY, INCLUDING
+// BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, NON-
+// INFRINGEMENT, OR FITNESS FOR ANY PARTICULAR PURPOSE; and
+// (2) AMD shall not be liable (whether in contract or tort,
+// including negligence, or under any other theory of
+// liability) for any loss or damage of any kind or nature
+// related to, arising under or in connection with these
+// materials, including for any direct, or any indirect,
+// special, incidental, or consequential loss or damage
+// (including loss of data, profits, goodwill, or any type of
+// loss or damage suffered as a result of any action brought
+// by a third party) even if such damage or loss was
+// reasonably foreseeable or AMD had been advised of the
+// possibility of the same.
 //
-//  CRITICAL APPLICATIONS
-//  Xilinx products are not designed or intended to be fail-
-//  safe, or for use in any application requiring fail-safe
-//  performance, such as life-support or safety devices or
-//  systems, Class III medical devices, nuclear facilities,
-//  applications related to the deployment of airbags, or any
-//  other applications that could lead to death, personal
-//  injury, or severe property or environmental damage
-//  (individually and collectively, "Critical
-//  Applications"). Customer assumes the sole risk and
-//  liability of any use of Xilinx products in Critical
-//  Applications, subject only to applicable laws and
-//  regulations governing limitations on product liability.
+// CRITICAL APPLICATIONS
+// AMD products are not designed or intended to be fail-
+// safe, or for use in any application requiring fail-safe
+// performance, such as life-support or safety devices or
+// systems, Class III medical devices, nuclear facilities,
+// applications related to the deployment of airbags, or any
+// other applications that could lead to death, personal
+// injury, or severe property or environmental damage
+// (individually and collectively, "Critical
+// Applications"). Customer assumes the sole risk and
+// liability of any use of AMD products in Critical
+// Applications, subject only to applicable laws and
+// regulations governing limitations on product liability.
 //
-//  THIS COPYRIGHT NOTICE AND DISCLAIMER MUST BE RETAINED AS
-//  PART OF THIS FILE AT ALL TIMES. 
-//-----------------------------------------------------------------------------
+// THIS COPYRIGHT NOTICE AND DISCLAIMER MUST BE RETAINED AS
+// PART OF THIS FILE AT ALL TIMES.
+////////////////////////////////////////////////////////////
 
 `timescale 1ps/1ps
 
-module axi_register_slice_v2_1_20_test_slave #
+module axi_register_slice_v2_1_31_test_slave #
   (
    parameter integer C_AXI_ID_WIDTH = 0,
    parameter integer C_AXI_ADDR_WIDTH = 32,
@@ -978,57 +976,56 @@ endmodule
 
 
 
-//  (c) Copyright 2017 Xilinx, Inc. All rights reserved.
+// (c) Copyright 2017, 2023 Advanced Micro Devices, Inc. All rights reserved.
 //
-//  This file contains confidential and proprietary information
-//  of Xilinx, Inc. and is protected under U.S. and
-//  international copyright and other intellectual property
-//  laws.
+// This file contains confidential and proprietary information
+// of AMD and is protected under U.S. and international copyright
+// and other intellectual property laws.
 //
-//  DISCLAIMER
-//  This disclaimer is not a license and does not grant any
-//  rights to the materials distributed herewith. Except as
-//  otherwise provided in a valid license issued to you by
-//  Xilinx, and to the maximum extent permitted by applicable
-//  law: (1) THESE MATERIALS ARE MADE AVAILABLE "AS IS" AND
-//  WITH ALL FAULTS, AND XILINX HEREBY DISCLAIMS ALL WARRANTIES
-//  AND CONDITIONS, EXPRESS, IMPLIED, OR STATUTORY, INCLUDING
-//  BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, NON-
-//  INFRINGEMENT, OR FITNESS FOR ANY PARTICULAR PURPOSE; and
-//  (2) Xilinx shall not be liable (whether in contract or tort,
-//  including negligence, or under any other theory of
-//  liability) for any loss or damage of any kind or nature
-//  related to, arising under or in connection with these
-//  materials, including for any direct, or any indirect,
-//  special, incidental, or consequential loss or damage
-//  (including loss of data, profits, goodwill, or any type of
-//  loss or damage suffered as a result of any action brought
-//  by a third party) even if such damage or loss was
-//  reasonably foreseeable or Xilinx had been advised of the
-//  possibility of the same.
+// DISCLAIMER
+// This disclaimer is not a license and does not grant any
+// rights to the materials distributed herewith. Except as
+// otherwise provided in a valid license issued to you by
+// AMD, and to the maximum extent permitted by applicable
+// law: (1) THESE MATERIALS ARE MADE AVAILABLE "AS IS" AND
+// WITH ALL FAULTS, AND AMD HEREBY DISCLAIMS ALL WARRANTIES
+// AND CONDITIONS, EXPRESS, IMPLIED, OR STATUTORY, INCLUDING
+// BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, NON-
+// INFRINGEMENT, OR FITNESS FOR ANY PARTICULAR PURPOSE; and
+// (2) AMD shall not be liable (whether in contract or tort,
+// including negligence, or under any other theory of
+// liability) for any loss or damage of any kind or nature
+// related to, arising under or in connection with these
+// materials, including for any direct, or any indirect,
+// special, incidental, or consequential loss or damage
+// (including loss of data, profits, goodwill, or any type of
+// loss or damage suffered as a result of any action brought
+// by a third party) even if such damage or loss was
+// reasonably foreseeable or AMD had been advised of the
+// possibility of the same.
 //
-//  CRITICAL APPLICATIONS
-//  Xilinx products are not designed or intended to be fail-
-//  safe, or for use in any application requiring fail-safe
-//  performance, such as life-support or safety devices or
-//  systems, Class III medical devices, nuclear facilities,
-//  applications related to the deployment of airbags, or any
-//  other applications that could lead to death, personal
-//  injury, or severe property or environmental damage
-//  (individually and collectively, "Critical
-//  Applications"). Customer assumes the sole risk and
-//  liability of any use of Xilinx products in Critical
-//  Applications, subject only to applicable laws and
-//  regulations governing limitations on product liability.
+// CRITICAL APPLICATIONS
+// AMD products are not designed or intended to be fail-
+// safe, or for use in any application requiring fail-safe
+// performance, such as life-support or safety devices or
+// systems, Class III medical devices, nuclear facilities,
+// applications related to the deployment of airbags, or any
+// other applications that could lead to death, personal
+// injury, or severe property or environmental damage
+// (individually and collectively, "Critical
+// Applications"). Customer assumes the sole risk and
+// liability of any use of AMD products in Critical
+// Applications, subject only to applicable laws and
+// regulations governing limitations on product liability.
 //
-//  THIS COPYRIGHT NOTICE AND DISCLAIMER MUST BE RETAINED AS
-//  PART OF THIS FILE AT ALL TIMES. 
-//-----------------------------------------------------------------------------
+// THIS COPYRIGHT NOTICE AND DISCLAIMER MUST BE RETAINED AS
+// PART OF THIS FILE AT ALL TIMES.
+////////////////////////////////////////////////////////////
 
 `timescale 1ps/1ps
 `default_nettype none
 
-module axi_register_slice_v2_1_20_tdm_sample (
+module axi_register_slice_v2_1_31_tdm_sample (
 ///////////////////////////////////////////////////////////////////////////////
 // Port Declarations
 ///////////////////////////////////////////////////////////////////////////////
@@ -1082,57 +1079,56 @@ endmodule // tdm_sample
 `default_nettype wire
 
 
-// -- (c) Copyright 2017 Xilinx, Inc. All rights reserved.
-// --
-// -- This file contains confidential and proprietary information
-// -- of Xilinx, Inc. and is protected under U.S. and 
-// -- international copyright and other intellectual property
-// -- laws.
-// --
-// -- DISCLAIMER
-// -- This disclaimer is not a license and does not grant any
-// -- rights to the materials distributed herewith. Except as
-// -- otherwise provided in a valid license issued to you by
-// -- Xilinx, and to the maximum extent permitted by applicable
-// -- law: (1) THESE MATERIALS ARE MADE AVAILABLE "AS IS" AND
-// -- WITH ALL FAULTS, AND XILINX HEREBY DISCLAIMS ALL WARRANTIES
-// -- AND CONDITIONS, EXPRESS, IMPLIED, OR STATUTORY, INCLUDING
-// -- BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, NON-
-// -- INFRINGEMENT, OR FITNESS FOR ANY PARTICULAR PURPOSE; and
-// -- (2) Xilinx shall not be liable (whether in contract or tort,
-// -- including negligence, or under any other theory of
-// -- liability) for any loss or damage of any kind or nature
-// -- related to, arising under or in connection with these
-// -- materials, including for any direct, or any indirect,
-// -- special, incidental, or consequential loss or damage
-// -- (including loss of data, profits, goodwill, or any type of
-// -- loss or damage suffered as a result of any action brought
-// -- by a third party) even if such damage or loss was
-// -- reasonably foreseeable or Xilinx had been advised of the
-// -- possibility of the same.
-// --
-// -- CRITICAL APPLICATIONS
-// -- Xilinx products are not designed or intended to be fail-
-// -- safe, or for use in any application requiring fail-safe
-// -- performance, such as life-support or safety devices or
-// -- systems, Class III medical devices, nuclear facilities,
-// -- applications related to the deployment of airbags, or any
-// -- other applications that could lead to death, personal
-// -- injury, or severe property or environmental damage
-// -- (individually and collectively, "Critical
-// -- Applications"). Customer assumes the sole risk and
-// -- liability of any use of Xilinx products in Critical
-// -- Applications, subject only to applicable laws and
-// -- regulations governing limitations on product liability.
-// --
-// -- THIS COPYRIGHT NOTICE AND DISCLAIMER MUST BE RETAINED AS
-// -- PART OF THIS FILE AT ALL TIMES.
-//-----------------------------------------------------------------------------
+// (c) Copyright 2017, 2023 Advanced Micro Devices, Inc. All rights reserved.
+//
+// This file contains confidential and proprietary information
+// of AMD and is protected under U.S. and international copyright
+// and other intellectual property laws.
+//
+// DISCLAIMER
+// This disclaimer is not a license and does not grant any
+// rights to the materials distributed herewith. Except as
+// otherwise provided in a valid license issued to you by
+// AMD, and to the maximum extent permitted by applicable
+// law: (1) THESE MATERIALS ARE MADE AVAILABLE "AS IS" AND
+// WITH ALL FAULTS, AND AMD HEREBY DISCLAIMS ALL WARRANTIES
+// AND CONDITIONS, EXPRESS, IMPLIED, OR STATUTORY, INCLUDING
+// BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, NON-
+// INFRINGEMENT, OR FITNESS FOR ANY PARTICULAR PURPOSE; and
+// (2) AMD shall not be liable (whether in contract or tort,
+// including negligence, or under any other theory of
+// liability) for any loss or damage of any kind or nature
+// related to, arising under or in connection with these
+// materials, including for any direct, or any indirect,
+// special, incidental, or consequential loss or damage
+// (including loss of data, profits, goodwill, or any type of
+// loss or damage suffered as a result of any action brought
+// by a third party) even if such damage or loss was
+// reasonably foreseeable or AMD had been advised of the
+// possibility of the same.
+//
+// CRITICAL APPLICATIONS
+// AMD products are not designed or intended to be fail-
+// safe, or for use in any application requiring fail-safe
+// performance, such as life-support or safety devices or
+// systems, Class III medical devices, nuclear facilities,
+// applications related to the deployment of airbags, or any
+// other applications that could lead to death, personal
+// injury, or severe property or environmental damage
+// (individually and collectively, "Critical
+// Applications"). Customer assumes the sole risk and
+// liability of any use of AMD products in Critical
+// Applications, subject only to applicable laws and
+// regulations governing limitations on product liability.
+//
+// THIS COPYRIGHT NOTICE AND DISCLAIMER MUST BE RETAINED AS
+// PART OF THIS FILE AT ALL TIMES.
+////////////////////////////////////////////////////////////
 
 `timescale 1ps/1ps
 (* DowngradeIPIdentifiedWarnings="yes" *) 
 (* autopipeline_module="yes" *)
-module axi_register_slice_v2_1_20_auto_slr #
+module axi_register_slice_v2_1_31_auto_slr #
   (
    parameter integer C_DATA_WIDTH = 32
    )
@@ -1182,7 +1178,7 @@ module axi_register_slice_v2_1_20_auto_slr #
     
   // Source-side submodule
     
-    axi_register_slice_v2_1_20_auto_src #
+    axi_register_slice_v2_1_31_auto_src #
       (
        .C_DATA_WIDTH (C_DATA_WIDTH)
       )
@@ -1201,7 +1197,7 @@ module axi_register_slice_v2_1_20_auto_slr #
     
   // Destination-side submodule
     
-    axi_register_slice_v2_1_20_auto_dest #
+    axi_register_slice_v2_1_31_auto_dest #
       (
        .C_DATA_WIDTH (C_DATA_WIDTH)
       )
@@ -1220,7 +1216,7 @@ module axi_register_slice_v2_1_20_auto_slr #
     
 endmodule  // auto_slr
 
-module axi_register_slice_v2_1_20_auto_src #
+module axi_register_slice_v2_1_31_auto_src #
   (
    parameter integer C_DATA_WIDTH = 32
   )
@@ -1237,28 +1233,39 @@ module axi_register_slice_v2_1_20_auto_src #
    );
     
    (* autopipeline_group="fwd",autopipeline_limit=24,autopipeline_include="resp" *) reg  [C_DATA_WIDTH-1:0] payload_pipe_r;
-    (* keep="true" *) reg [3:0] s_aresetn_resp3 = 4'b0000;
+    (* keep="true" *) reg [2:0] s_aresetn_resp4 = 3'b000;
+    wire s_aresetn_resp3;
     wire s_aresetn_d;
     wire s_aresetn_q;
     wire s_handshake_d;
     wire s_ready_i;
     
     assign S_READY = s_ready_i & s_aresetn_q;
-    assign s_aresetn_d = (~s_aresetn_resp3[3] & s_aresetn_resp3[1]) | s_aresetn_q;
+    assign s_aresetn_d = (~s_aresetn_resp4[2] & s_aresetn_resp4[0]) | s_aresetn_q;
     assign s_handshake_d = S_VALID & s_ready_i & s_aresetn_q;
     assign payload_pipe = payload_pipe_r;
     
     always @(posedge ACLK or posedge s_aclear) begin
       if (s_aclear) begin
-        s_aresetn_resp3 <= 3'b000;
+        s_aresetn_resp4 <= 3'b000;
       end else begin
-        s_aresetn_resp3 <= {s_aresetn_resp3[2:0], ~s_areset_resp2};
+        s_aresetn_resp4 <= {s_aresetn_resp4[1:0], s_aresetn_resp3};
       end
     end
     
     always @(posedge ACLK) begin
       payload_pipe_r <= S_PAYLOAD_DATA;
     end
+    
+    FDCE #(
+        .INIT(1'b0)
+     ) s_aresetn_resp3_inst (
+        .Q   (s_aresetn_resp3),
+        .C   (ACLK), 
+        .CE  (1'b1),
+        .CLR (1'b0),
+        .D   (~s_areset_resp2)
+     );
     
     // Assert s_aresetn_q asynchronously on leading edge of s_aclear; De-assert synchronously on trailing edge of s_areset_resp2.
     FDCE #(
@@ -1294,7 +1301,7 @@ module axi_register_slice_v2_1_20_auto_src #
     
 endmodule  // auto_src
 
-module axi_register_slice_v2_1_20_auto_dest #
+module axi_register_slice_v2_1_31_auto_dest #
   (
    parameter integer C_DATA_WIDTH = 32
    )
@@ -1310,7 +1317,8 @@ module axi_register_slice_v2_1_20_auto_dest #
    output wire [C_DATA_WIDTH-1:0] M_PAYLOAD_DATA
    );
     
-    (* keep="true" *) reg [3:0] m_aresetn_resp3 = 4'b0000;
+    (* keep="true" *) reg [2:0] m_aresetn_resp4 = 3'b000;
+    wire m_aresetn_resp3;
     wire m_aresetn_d;
     wire m_aresetn_q;
     wire m_valid_i;
@@ -1320,21 +1328,31 @@ module axi_register_slice_v2_1_20_auto_dest #
     reg  [C_DATA_WIDTH-1:0] m_payload_q;
     
     assign M_VALID = m_valid_i;
-    assign m_aresetn_d = (~m_aresetn_resp3[3] & m_aresetn_resp3[1]) | m_aresetn_q;
+    assign m_aresetn_d = (~m_aresetn_resp4[2] & m_aresetn_resp4[0]) | m_aresetn_q;
     assign m_ready_d = (M_READY | ~m_valid_i) & m_aresetn_q;
     assign pop     = M_READY & m_valid_i;
     
     always @(posedge ACLK or posedge m_aclear) begin
       if (m_aclear) begin
-        m_aresetn_resp3 <= 3'b000;
+        m_aresetn_resp4 <= 3'b000;
       end else begin
-        m_aresetn_resp3 <= {m_aresetn_resp3[2:0], ~m_areset_resp2};
+        m_aresetn_resp4 <= {m_aresetn_resp4[1:0], m_aresetn_resp3};
       end
     end
     
     always @(posedge ACLK) begin
       m_payload_q <= payload_pipe;
     end
+    
+    FDCE #(
+        .INIT(1'b0)
+     ) m_aresetn_resp3_inst (
+        .Q   (m_aresetn_resp3),
+        .C   (ACLK), 
+        .CE  (1'b1),
+        .CLR (1'b0),
+        .D   (~m_areset_resp2)
+     );
     
     // Assert m_aresetn_q asynchronously on leading edge of m_aclear; De-assert synchronously on trailing edge of m_areset_resp2.
     FDCE #(
@@ -1368,7 +1386,7 @@ module axi_register_slice_v2_1_20_auto_dest #
         .D   (m_ready_d)
      );
     
-    axi_register_slice_v2_1_20_axic_reg_srl_fifo #
+    axi_register_slice_v2_1_31_axic_reg_srl_fifo #
       (
        .C_FIFO_WIDTH (C_DATA_WIDTH), 
        .C_FIFO_SIZE  (5)  
@@ -1389,52 +1407,51 @@ endmodule  // auto_dest
 
 
 
-// -- (c) Copyright 2010 - 2017 Xilinx, Inc. All rights reserved.
-// --
-// -- This file contains confidential and proprietary information
-// -- of Xilinx, Inc. and is protected under U.S. and 
-// -- international copyright and other intellectual property
-// -- laws.
-// --
-// -- DISCLAIMER
-// -- This disclaimer is not a license and does not grant any
-// -- rights to the materials distributed herewith. Except as
-// -- otherwise provided in a valid license issued to you by
-// -- Xilinx, and to the maximum extent permitted by applicable
-// -- law: (1) THESE MATERIALS ARE MADE AVAILABLE "AS IS" AND
-// -- WITH ALL FAULTS, AND XILINX HEREBY DISCLAIMS ALL WARRANTIES
-// -- AND CONDITIONS, EXPRESS, IMPLIED, OR STATUTORY, INCLUDING
-// -- BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, NON-
-// -- INFRINGEMENT, OR FITNESS FOR ANY PARTICULAR PURPOSE; and
-// -- (2) Xilinx shall not be liable (whether in contract or tort,
-// -- including negligence, or under any other theory of
-// -- liability) for any loss or damage of any kind or nature
-// -- related to, arising under or in connection with these
-// -- materials, including for any direct, or any indirect,
-// -- special, incidental, or consequential loss or damage
-// -- (including loss of data, profits, goodwill, or any type of
-// -- loss or damage suffered as a result of any action brought
-// -- by a third party) even if such damage or loss was
-// -- reasonably foreseeable or Xilinx had been advised of the
-// -- possibility of the same.
-// --
-// -- CRITICAL APPLICATIONS
-// -- Xilinx products are not designed or intended to be fail-
-// -- safe, or for use in any application requiring fail-safe
-// -- performance, such as life-support or safety devices or
-// -- systems, Class III medical devices, nuclear facilities,
-// -- applications related to the deployment of airbags, or any
-// -- other applications that could lead to death, personal
-// -- injury, or severe property or environmental damage
-// -- (individually and collectively, "Critical
-// -- Applications"). Customer assumes the sole risk and
-// -- liability of any use of Xilinx products in Critical
-// -- Applications, subject only to applicable laws and
-// -- regulations governing limitations on product liability.
-// --
-// -- THIS COPYRIGHT NOTICE AND DISCLAIMER MUST BE RETAINED AS
-// -- PART OF THIS FILE AT ALL TIMES.
-//-----------------------------------------------------------------------------
+// (c) Copyright 2010-2017, 2023 Advanced Micro Devices, Inc. All rights reserved.
+//
+// This file contains confidential and proprietary information
+// of AMD and is protected under U.S. and international copyright
+// and other intellectual property laws.
+//
+// DISCLAIMER
+// This disclaimer is not a license and does not grant any
+// rights to the materials distributed herewith. Except as
+// otherwise provided in a valid license issued to you by
+// AMD, and to the maximum extent permitted by applicable
+// law: (1) THESE MATERIALS ARE MADE AVAILABLE "AS IS" AND
+// WITH ALL FAULTS, AND AMD HEREBY DISCLAIMS ALL WARRANTIES
+// AND CONDITIONS, EXPRESS, IMPLIED, OR STATUTORY, INCLUDING
+// BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, NON-
+// INFRINGEMENT, OR FITNESS FOR ANY PARTICULAR PURPOSE; and
+// (2) AMD shall not be liable (whether in contract or tort,
+// including negligence, or under any other theory of
+// liability) for any loss or damage of any kind or nature
+// related to, arising under or in connection with these
+// materials, including for any direct, or any indirect,
+// special, incidental, or consequential loss or damage
+// (including loss of data, profits, goodwill, or any type of
+// loss or damage suffered as a result of any action brought
+// by a third party) even if such damage or loss was
+// reasonably foreseeable or AMD had been advised of the
+// possibility of the same.
+//
+// CRITICAL APPLICATIONS
+// AMD products are not designed or intended to be fail-
+// safe, or for use in any application requiring fail-safe
+// performance, such as life-support or safety devices or
+// systems, Class III medical devices, nuclear facilities,
+// applications related to the deployment of airbags, or any
+// other applications that could lead to death, personal
+// injury, or severe property or environmental damage
+// (individually and collectively, "Critical
+// Applications"). Customer assumes the sole risk and
+// liability of any use of AMD products in Critical
+// Applications, subject only to applicable laws and
+// regulations governing limitations on product liability.
+//
+// THIS COPYRIGHT NOTICE AND DISCLAIMER MUST BE RETAINED AS
+// PART OF THIS FILE AT ALL TIMES.
+////////////////////////////////////////////////////////////
 //
 // Register Slice
 //   Generic single-channel AXI pipeline register on forward and/or reverse signal path
@@ -1449,7 +1466,7 @@ endmodule  // auto_dest
 
 `timescale 1ps/1ps
 (* DowngradeIPIdentifiedWarnings="yes" *) 
-module axi_register_slice_v2_1_20_srl_rtl #
+module axi_register_slice_v2_1_31_srl_rtl #
   (
    parameter         C_A_WIDTH = 2          // Address Width (>= 1)
    )
@@ -1473,7 +1490,7 @@ endmodule  // srl_rtl
 
 `timescale 1ps/1ps
 (* DowngradeIPIdentifiedWarnings="yes" *) 
-module axi_register_slice_v2_1_20_axic_register_slice #
+module axi_register_slice_v2_1_31_axic_register_slice #
   (
    parameter C_FAMILY     = "virtex6",
    parameter C_DATA_WIDTH = 32,
@@ -1676,7 +1693,7 @@ module axi_register_slice_v2_1_20_axic_register_slice #
     //---------------------------------------------------------------------------
       genvar i;
       for (i=0;i<C_DATA_WIDTH;i=i+1) begin : gen_srls
-        axi_register_slice_v2_1_20_srl_rtl #
+        axi_register_slice_v2_1_31_srl_rtl #
           (
            .C_A_WIDTH (2)
           )
@@ -2116,52 +2133,51 @@ module axi_register_slice_v2_1_20_axic_register_slice #
 endmodule // axic_register_slice
 
 
-// -- (c) Copyright 2017 Xilinx, Inc. All rights reserved.
-// --
-// -- This file contains confidential and proprietary information
-// -- of Xilinx, Inc. and is protected under U.S. and 
-// -- international copyright and other intellectual property
-// -- laws.
-// --
-// -- DISCLAIMER
-// -- This disclaimer is not a license and does not grant any
-// -- rights to the materials distributed herewith. Except as
-// -- otherwise provided in a valid license issued to you by
-// -- Xilinx, and to the maximum extent permitted by applicable
-// -- law: (1) THESE MATERIALS ARE MADE AVAILABLE "AS IS" AND
-// -- WITH ALL FAULTS, AND XILINX HEREBY DISCLAIMS ALL WARRANTIES
-// -- AND CONDITIONS, EXPRESS, IMPLIED, OR STATUTORY, INCLUDING
-// -- BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, NON-
-// -- INFRINGEMENT, OR FITNESS FOR ANY PARTICULAR PURPOSE; and
-// -- (2) Xilinx shall not be liable (whether in contract or tort,
-// -- including negligence, or under any other theory of
-// -- liability) for any loss or damage of any kind or nature
-// -- related to, arising under or in connection with these
-// -- materials, including for any direct, or any indirect,
-// -- special, incidental, or consequential loss or damage
-// -- (including loss of data, profits, goodwill, or any type of
-// -- loss or damage suffered as a result of any action brought
-// -- by a third party) even if such damage or loss was
-// -- reasonably foreseeable or Xilinx had been advised of the
-// -- possibility of the same.
-// --
-// -- CRITICAL APPLICATIONS
-// -- Xilinx products are not designed or intended to be fail-
-// -- safe, or for use in any application requiring fail-safe
-// -- performance, such as life-support or safety devices or
-// -- systems, Class III medical devices, nuclear facilities,
-// -- applications related to the deployment of airbags, or any
-// -- other applications that could lead to death, personal
-// -- injury, or severe property or environmental damage
-// -- (individually and collectively, "Critical
-// -- Applications"). Customer assumes the sole risk and
-// -- liability of any use of Xilinx products in Critical
-// -- Applications, subject only to applicable laws and
-// -- regulations governing limitations on product liability.
-// --
-// -- THIS COPYRIGHT NOTICE AND DISCLAIMER MUST BE RETAINED AS
-// -- PART OF THIS FILE AT ALL TIMES.
-//-----------------------------------------------------------------------------
+// (c) Copyright 2017, 2023 Advanced Micro Devices, Inc. All rights reserved.
+//
+// This file contains confidential and proprietary information
+// of AMD and is protected under U.S. and international copyright
+// and other intellectual property laws.
+//
+// DISCLAIMER
+// This disclaimer is not a license and does not grant any
+// rights to the materials distributed herewith. Except as
+// otherwise provided in a valid license issued to you by
+// AMD, and to the maximum extent permitted by applicable
+// law: (1) THESE MATERIALS ARE MADE AVAILABLE "AS IS" AND
+// WITH ALL FAULTS, AND AMD HEREBY DISCLAIMS ALL WARRANTIES
+// AND CONDITIONS, EXPRESS, IMPLIED, OR STATUTORY, INCLUDING
+// BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, NON-
+// INFRINGEMENT, OR FITNESS FOR ANY PARTICULAR PURPOSE; and
+// (2) AMD shall not be liable (whether in contract or tort,
+// including negligence, or under any other theory of
+// liability) for any loss or damage of any kind or nature
+// related to, arising under or in connection with these
+// materials, including for any direct, or any indirect,
+// special, incidental, or consequential loss or damage
+// (including loss of data, profits, goodwill, or any type of
+// loss or damage suffered as a result of any action brought
+// by a third party) even if such damage or loss was
+// reasonably foreseeable or AMD had been advised of the
+// possibility of the same.
+//
+// CRITICAL APPLICATIONS
+// AMD products are not designed or intended to be fail-
+// safe, or for use in any application requiring fail-safe
+// performance, such as life-support or safety devices or
+// systems, Class III medical devices, nuclear facilities,
+// applications related to the deployment of airbags, or any
+// other applications that could lead to death, personal
+// injury, or severe property or environmental damage
+// (individually and collectively, "Critical
+// Applications"). Customer assumes the sole risk and
+// liability of any use of AMD products in Critical
+// Applications, subject only to applicable laws and
+// regulations governing limitations on product liability.
+//
+// THIS COPYRIGHT NOTICE AND DISCLAIMER MUST BE RETAINED AS
+// PART OF THIS FILE AT ALL TIMES.
+////////////////////////////////////////////////////////////
 //
 // Register Slice
 //   Generic single-channel AXI pipeline register on forward and/or reverse signal path
@@ -2176,7 +2192,7 @@ endmodule // axic_register_slice
 
 `timescale 1ps/1ps
 (* DowngradeIPIdentifiedWarnings="yes" *) 
-module axi_register_slice_v2_1_20_multi_slr #
+module axi_register_slice_v2_1_31_multi_slr #
   (
    parameter C_FAMILY     = "virtex6",
    parameter integer C_DATA_WIDTH = 32,
@@ -2216,7 +2232,7 @@ module axi_register_slice_v2_1_20_multi_slr #
   
   if (C_NUM_SLR_CROSSINGS==0) begin : single_slr
     
-    axi_register_slice_v2_1_20_single_slr # (
+    axi_register_slice_v2_1_31_single_slr # (
       .C_FAMILY     ( C_FAMILY              ) ,
       .C_DATA_WIDTH ( C_DATA_WIDTH ) ,
       .C_PIPELINES  (C_PIPELINES_MASTER) 
@@ -2241,7 +2257,7 @@ module axi_register_slice_v2_1_20_multi_slr #
     wire dummy_reset;
         
     if (C_CHANNEL==P_FORWARD) begin : fwd
-      axi_register_slice_v2_1_20_source_region_slr # (
+      axi_register_slice_v2_1_31_source_region_slr # (
         .C_FAMILY     ( C_FAMILY ) ,
         .C_DATA_WIDTH ( C_DATA_WIDTH ) ,
         .C_SLR_WIDTH  ( C_DATA_WIDTH ),
@@ -2263,7 +2279,7 @@ module axi_register_slice_v2_1_20_multi_slr #
         .laguna_m_ready     ( src_ready   )
       );
       
-      axi_register_slice_v2_1_20_dest_region_slr #(
+      axi_register_slice_v2_1_31_dest_region_slr #(
         .C_FAMILY     ( C_FAMILY         ) ,
         .C_REG_CONFIG ( P_REG_CONFIG ) ,
         .C_CHANNEL    ( C_CHANNEL ),
@@ -2287,7 +2303,7 @@ module axi_register_slice_v2_1_20_multi_slr #
       );
       
     end else begin : resp
-      axi_register_slice_v2_1_20_source_region_slr # (
+      axi_register_slice_v2_1_31_source_region_slr # (
         .C_FAMILY     ( C_FAMILY ) ,
         .C_DATA_WIDTH ( C_DATA_WIDTH ) ,
         .C_SLR_WIDTH  ( C_DATA_WIDTH ),
@@ -2309,7 +2325,7 @@ module axi_register_slice_v2_1_20_multi_slr #
         .laguna_m_ready     ( src_ready   )
       );
       
-      axi_register_slice_v2_1_20_dest_region_slr #(
+      axi_register_slice_v2_1_31_dest_region_slr #(
         .C_FAMILY     ( C_FAMILY         ) ,
         .C_REG_CONFIG ( P_REG_CONFIG ) ,
         .C_CHANNEL    ( C_CHANNEL ),
@@ -2347,7 +2363,7 @@ module axi_register_slice_v2_1_20_multi_slr #
     wire dummy_reset2;
         
     if (C_CHANNEL==P_FORWARD) begin : fwd
-      axi_register_slice_v2_1_20_source_region_slr # (
+      axi_register_slice_v2_1_31_source_region_slr # (
         .C_FAMILY     ( C_FAMILY ) ,
         .C_DATA_WIDTH ( C_DATA_WIDTH ) ,
         .C_SLR_WIDTH  ( C_DATA_WIDTH ),
@@ -2369,7 +2385,7 @@ module axi_register_slice_v2_1_20_multi_slr #
         .laguna_m_ready     ( src_ready   )
       );
       
-      axi_register_slice_v2_1_20_middle_region_slr #(
+      axi_register_slice_v2_1_31_middle_region_slr #(
         .C_FAMILY     ( C_FAMILY         ) ,
         .C_DATA_WIDTH ( C_DATA_WIDTH ) ,
         .C_CHANNEL    ( C_CHANNEL ),
@@ -2391,7 +2407,7 @@ module axi_register_slice_v2_1_20_multi_slr #
         .laguna_m_ready     ( dest_ready   )
       );
       
-      axi_register_slice_v2_1_20_dest_region_slr #(
+      axi_register_slice_v2_1_31_dest_region_slr #(
         .C_FAMILY     ( C_FAMILY         ) ,
         .C_REG_CONFIG ( P_REG_CONFIG ) ,
         .C_CHANNEL    ( C_CHANNEL ),
@@ -2415,7 +2431,7 @@ module axi_register_slice_v2_1_20_multi_slr #
       );
       
     end else begin : resp
-      axi_register_slice_v2_1_20_source_region_slr # (
+      axi_register_slice_v2_1_31_source_region_slr # (
         .C_FAMILY     ( C_FAMILY ) ,
         .C_DATA_WIDTH ( C_DATA_WIDTH ) ,
         .C_SLR_WIDTH  ( C_DATA_WIDTH ),
@@ -2437,7 +2453,7 @@ module axi_register_slice_v2_1_20_multi_slr #
         .laguna_m_ready     ( src_ready   )
       );
       
-      axi_register_slice_v2_1_20_middle_region_slr #(
+      axi_register_slice_v2_1_31_middle_region_slr #(
         .C_FAMILY     ( C_FAMILY         ) ,
         .C_DATA_WIDTH ( C_DATA_WIDTH ) ,
         .C_CHANNEL    ( C_CHANNEL ),
@@ -2459,7 +2475,7 @@ module axi_register_slice_v2_1_20_multi_slr #
         .laguna_m_ready     ( dest_ready   )
       );
       
-      axi_register_slice_v2_1_20_dest_region_slr #(
+      axi_register_slice_v2_1_31_dest_region_slr #(
         .C_FAMILY     ( C_FAMILY         ) ,
         .C_REG_CONFIG ( P_REG_CONFIG ) ,
         .C_CHANNEL    ( C_CHANNEL ),
@@ -2502,7 +2518,7 @@ module axi_register_slice_v2_1_20_multi_slr #
     wire dummy_reset3;
         
     if (C_CHANNEL==P_FORWARD) begin : fwd
-      axi_register_slice_v2_1_20_source_region_slr # (
+      axi_register_slice_v2_1_31_source_region_slr # (
         .C_FAMILY     ( C_FAMILY ) ,
         .C_DATA_WIDTH ( C_DATA_WIDTH ) ,
         .C_SLR_WIDTH  ( C_DATA_WIDTH ),
@@ -2524,7 +2540,7 @@ module axi_register_slice_v2_1_20_multi_slr #
         .laguna_m_ready     ( src_ready   )
       );
       
-      axi_register_slice_v2_1_20_middle_region_slr #(
+      axi_register_slice_v2_1_31_middle_region_slr #(
         .C_FAMILY     ( C_FAMILY         ) ,
         .C_DATA_WIDTH ( C_DATA_WIDTH ) ,
         .C_CHANNEL    ( C_CHANNEL ),
@@ -2546,7 +2562,7 @@ module axi_register_slice_v2_1_20_multi_slr #
         .laguna_m_ready     ( mid_ready   )
       );
       
-      axi_register_slice_v2_1_20_middle_region_slr #(
+      axi_register_slice_v2_1_31_middle_region_slr #(
         .C_FAMILY     ( C_FAMILY         ) ,
         .C_DATA_WIDTH ( C_DATA_WIDTH ) ,
         .C_CHANNEL    ( C_CHANNEL ),
@@ -2568,7 +2584,7 @@ module axi_register_slice_v2_1_20_multi_slr #
         .laguna_m_ready     ( dest_ready   )
       );
       
-      axi_register_slice_v2_1_20_dest_region_slr #(
+      axi_register_slice_v2_1_31_dest_region_slr #(
         .C_FAMILY     ( C_FAMILY         ) ,
         .C_REG_CONFIG ( P_REG_CONFIG ) ,
         .C_CHANNEL    ( C_CHANNEL ),
@@ -2592,7 +2608,7 @@ module axi_register_slice_v2_1_20_multi_slr #
       );
       
     end else begin : resp
-      axi_register_slice_v2_1_20_source_region_slr # (
+      axi_register_slice_v2_1_31_source_region_slr # (
         .C_FAMILY     ( C_FAMILY ) ,
         .C_DATA_WIDTH ( C_DATA_WIDTH ) ,
         .C_SLR_WIDTH  ( C_DATA_WIDTH ),
@@ -2614,7 +2630,7 @@ module axi_register_slice_v2_1_20_multi_slr #
         .laguna_m_ready     ( src_ready   )
       );
       
-      axi_register_slice_v2_1_20_middle_region_slr #(
+      axi_register_slice_v2_1_31_middle_region_slr #(
         .C_FAMILY     ( C_FAMILY         ) ,
         .C_DATA_WIDTH ( C_DATA_WIDTH ) ,
         .C_CHANNEL    ( C_CHANNEL ),
@@ -2636,7 +2652,7 @@ module axi_register_slice_v2_1_20_multi_slr #
         .laguna_m_ready     ( mid_ready   )
       );
       
-      axi_register_slice_v2_1_20_middle_region_slr #(
+      axi_register_slice_v2_1_31_middle_region_slr #(
         .C_FAMILY     ( C_FAMILY         ) ,
         .C_DATA_WIDTH ( C_DATA_WIDTH ) ,
         .C_CHANNEL    ( C_CHANNEL ),
@@ -2658,7 +2674,7 @@ module axi_register_slice_v2_1_20_multi_slr #
         .laguna_m_ready     ( dest_ready   )
       );
       
-      axi_register_slice_v2_1_20_dest_region_slr #(
+      axi_register_slice_v2_1_31_dest_region_slr #(
         .C_FAMILY     ( C_FAMILY         ) ,
         .C_REG_CONFIG ( P_REG_CONFIG ) ,
         .C_CHANNEL    ( C_CHANNEL ),
@@ -2688,7 +2704,7 @@ endmodule  // multi_slr
 
 `timescale 1ps/1ps
 (* DowngradeIPIdentifiedWarnings="yes" *) 
-module axi_register_slice_v2_1_20_middle_region_slr #
+module axi_register_slice_v2_1_31_middle_region_slr #
   (
    parameter C_FAMILY     = "virtex6",
    parameter integer C_DATA_WIDTH = 32,
@@ -2829,7 +2845,7 @@ endmodule  // middle_region_slr
 
 `timescale 1ps/1ps
 (* DowngradeIPIdentifiedWarnings="yes" *) 
-module axi_register_slice_v2_1_20_source_region_slr #
+module axi_register_slice_v2_1_31_source_region_slr #
   (
    parameter C_FAMILY     = "virtex6",
    parameter integer C_REG_CONFIG = 12,
@@ -2909,7 +2925,7 @@ module axi_register_slice_v2_1_20_source_region_slr #
       end
     end
 
-    axi_register_slice_v2_1_20_tdm_sample tdm_sample_inst (
+    axi_register_slice_v2_1_31_tdm_sample tdm_sample_inst (
       .slow_clk     (ACLK),
       .fast_clk     (ACLK2X),
       .sample_cycle (sample_cycle)
@@ -3013,7 +3029,7 @@ endmodule  // source_region_slr
 
 `timescale 1ps/1ps
 (* DowngradeIPIdentifiedWarnings="yes" *)
-module axi_register_slice_v2_1_20_dest_region_slr #
+module axi_register_slice_v2_1_31_dest_region_slr #
   (
    parameter C_FAMILY     = "virtex6",
    parameter integer C_REG_CONFIG = 12,
@@ -3232,7 +3248,7 @@ module axi_register_slice_v2_1_20_dest_region_slr #
         .D   (laguna_s_handshake)
      );
         
-    axi_register_slice_v2_1_20_axic_reg_srl_fifo #
+    axi_register_slice_v2_1_31_axic_reg_srl_fifo #
       (
        .C_FIFO_WIDTH (C_DATA_WIDTH), 
        .C_FIFO_SIZE  ((C_PIPELINES+C_SOURCE_LATENCY>14) ? 6 : (C_PIPELINES+C_SOURCE_LATENCY>6) ? 5 : 4)  
@@ -3255,7 +3271,7 @@ endmodule  // dest_region_slr
 
 `timescale 1ps/1ps
 (* DowngradeIPIdentifiedWarnings="yes" *)
-module axi_register_slice_v2_1_20_single_slr #
+module axi_register_slice_v2_1_31_single_slr #
   (
    parameter C_FAMILY     = "virtex6",
    parameter integer C_DATA_WIDTH = 32,
@@ -3394,7 +3410,7 @@ module axi_register_slice_v2_1_20_single_slr #
     
     end else begin : srl_fifo
     
-      axi_register_slice_v2_1_20_axic_reg_srl_fifo #
+      axi_register_slice_v2_1_31_axic_reg_srl_fifo #
         (
          .C_FIFO_WIDTH (C_DATA_WIDTH), 
          .C_FIFO_SIZE  ((C_PIPELINES>12) ? 5 : 4)  
@@ -3417,7 +3433,7 @@ module axi_register_slice_v2_1_20_single_slr #
 endmodule  // single_slr
 
 (* DowngradeIPIdentifiedWarnings="yes" *) 
-module axi_register_slice_v2_1_20_axic_reg_srl_fifo #
+module axi_register_slice_v2_1_31_axic_reg_srl_fifo #
   // FIFO with no s_ready back-pressure; must guarantee parent will never push beyond full
   (
    parameter integer C_FIFO_WIDTH  = 1,      // Width of s_mesg/m_mesg.
@@ -3620,7 +3636,7 @@ module axi_register_slice_v2_1_20_axic_reg_srl_fifo #
     // Instantiate SRLs
     //---------------------------------------------------------------------------
     for (i=0;i<C_FIFO_WIDTH;i=i+1) begin : srl
-      (* keep_hierarchy = "yes" *) axi_register_slice_v2_1_20_srl_rtl #
+      (* keep_hierarchy = "yes" *) axi_register_slice_v2_1_31_srl_rtl #
         (
          .C_A_WIDTH (C_FIFO_SIZE)
         )
@@ -3638,52 +3654,51 @@ module axi_register_slice_v2_1_20_axic_reg_srl_fifo #
 endmodule  // axic_reg_srl_fifo
 
 
-//  (c) Copyright 2010-2017 Xilinx, Inc. All rights reserved.
+// (c) Copyright 2010-2017, 2023 Advanced Micro Devices, Inc. All rights reserved.
 //
-//  This file contains confidential and proprietary information
-//  of Xilinx, Inc. and is protected under U.S. and
-//  international copyright and other intellectual property
-//  laws.
+// This file contains confidential and proprietary information
+// of AMD and is protected under U.S. and international copyright
+// and other intellectual property laws.
 //
-//  DISCLAIMER
-//  This disclaimer is not a license and does not grant any
-//  rights to the materials distributed herewith. Except as
-//  otherwise provided in a valid license issued to you by
-//  Xilinx, and to the maximum extent permitted by applicable
-//  law: (1) THESE MATERIALS ARE MADE AVAILABLE "AS IS" AND
-//  WITH ALL FAULTS, AND XILINX HEREBY DISCLAIMS ALL WARRANTIES
-//  AND CONDITIONS, EXPRESS, IMPLIED, OR STATUTORY, INCLUDING
-//  BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, NON-
-//  INFRINGEMENT, OR FITNESS FOR ANY PARTICULAR PURPOSE; and
-//  (2) Xilinx shall not be liable (whether in contract or tort,
-//  including negligence, or under any other theory of
-//  liability) for any loss or damage of any kind or nature
-//  related to, arising under or in connection with these
-//  materials, including for any direct, or any indirect,
-//  special, incidental, or consequential loss or damage
-//  (including loss of data, profits, goodwill, or any type of
-//  loss or damage suffered as a result of any action brought
-//  by a third party) even if such damage or loss was
-//  reasonably foreseeable or Xilinx had been advised of the
-//  possibility of the same.
+// DISCLAIMER
+// This disclaimer is not a license and does not grant any
+// rights to the materials distributed herewith. Except as
+// otherwise provided in a valid license issued to you by
+// AMD, and to the maximum extent permitted by applicable
+// law: (1) THESE MATERIALS ARE MADE AVAILABLE "AS IS" AND
+// WITH ALL FAULTS, AND AMD HEREBY DISCLAIMS ALL WARRANTIES
+// AND CONDITIONS, EXPRESS, IMPLIED, OR STATUTORY, INCLUDING
+// BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, NON-
+// INFRINGEMENT, OR FITNESS FOR ANY PARTICULAR PURPOSE; and
+// (2) AMD shall not be liable (whether in contract or tort,
+// including negligence, or under any other theory of
+// liability) for any loss or damage of any kind or nature
+// related to, arising under or in connection with these
+// materials, including for any direct, or any indirect,
+// special, incidental, or consequential loss or damage
+// (including loss of data, profits, goodwill, or any type of
+// loss or damage suffered as a result of any action brought
+// by a third party) even if such damage or loss was
+// reasonably foreseeable or AMD had been advised of the
+// possibility of the same.
 //
-//  CRITICAL APPLICATIONS
-//  Xilinx products are not designed or intended to be fail-
-//  safe, or for use in any application requiring fail-safe
-//  performance, such as life-support or safety devices or
-//  systems, Class III medical devices, nuclear facilities,
-//  applications related to the deployment of airbags, or any
-//  other applications that could lead to death, personal
-//  injury, or severe property or environmental damage
-//  (individually and collectively, "Critical
-//  Applications"). Customer assumes the sole risk and
-//  liability of any use of Xilinx products in Critical
-//  Applications, subject only to applicable laws and
-//  regulations governing limitations on product liability.
+// CRITICAL APPLICATIONS
+// AMD products are not designed or intended to be fail-
+// safe, or for use in any application requiring fail-safe
+// performance, such as life-support or safety devices or
+// systems, Class III medical devices, nuclear facilities,
+// applications related to the deployment of airbags, or any
+// other applications that could lead to death, personal
+// injury, or severe property or environmental damage
+// (individually and collectively, "Critical
+// Applications"). Customer assumes the sole risk and
+// liability of any use of AMD products in Critical
+// Applications, subject only to applicable laws and
+// regulations governing limitations on product liability.
 //
-//  THIS COPYRIGHT NOTICE AND DISCLAIMER MUST BE RETAINED AS
-//  PART OF THIS FILE AT ALL TIMES. 
-//-----------------------------------------------------------------------------
+// THIS COPYRIGHT NOTICE AND DISCLAIMER MUST BE RETAINED AS
+// PART OF THIS FILE AT ALL TIMES.
+////////////////////////////////////////////////////////////
 //
 // AXI Register Slice
 //   Register selected channels on the forward and/or reverse signal paths.
@@ -3701,7 +3716,7 @@ endmodule  // axic_reg_srl_fifo
 `timescale 1ps/1ps
 
 (* DowngradeIPIdentifiedWarnings="yes" *) 
-module axi_register_slice_v2_1_20_axi_register_slice #
+module axi_register_slice_v2_1_31_axi_register_slice #
   (
    parameter C_FAMILY                            = "virtex6",
    parameter C_AXI_PROTOCOL                      = 0,
@@ -3892,7 +3907,7 @@ module axi_register_slice_v2_1_20_axi_register_slice #
   
   if (C_RESERVE_MODE==1) begin : gen_reserve_si
   
-    axi_register_slice_v2_1_20_test_slave #(
+    axi_register_slice_v2_1_31_test_slave #(
       .C_AXI_ID_WIDTH(C_AXI_ID_WIDTH),
       .C_AXI_ADDR_WIDTH(C_AXI_ADDR_WIDTH),
       .C_AXI_DATA_WIDTH(C_AXI_DATA_WIDTH),
@@ -3987,7 +4002,7 @@ module axi_register_slice_v2_1_20_axi_register_slice #
       
   end else if (C_RESERVE_MODE==2) begin : gen_reserve_mi
     
-    axi_register_slice_v2_1_20_test_master #(
+    axi_register_slice_v2_1_31_test_master #(
     .C_AXI_ID_WIDTH(C_AXI_ID_WIDTH),
     .C_AXI_ADDR_WIDTH(C_AXI_ADDR_WIDTH),
     .C_AXI_DATA_WIDTH(C_AXI_DATA_WIDTH),
@@ -4186,7 +4201,7 @@ module axi_register_slice_v2_1_20_axi_register_slice #
   end  // Reserve SI/MI branch
 
   if ((C_REG_CONFIG_AW <= 9) && (C_RESERVE_MODE==0)) begin : aw
-    axi_register_slice_v2_1_20_axic_register_slice # (
+    axi_register_slice_v2_1_31_axic_register_slice # (
       .C_FAMILY     ( C_FAMILY              ) ,
       .C_DATA_WIDTH ( G_AXI_AWPAYLOAD_WIDTH ) ,
       .C_REG_CONFIG ( C_REG_CONFIG_AW       ) 
@@ -4209,7 +4224,7 @@ module axi_register_slice_v2_1_20_axi_register_slice #
     
   end else if ((C_REG_CONFIG_AW == 15) && (C_RESERVE_MODE==0)) begin : aw15
     
-    axi_register_slice_v2_1_20_multi_slr # (
+    axi_register_slice_v2_1_31_multi_slr # (
       .C_FAMILY     ( C_FAMILY              ) ,
       .C_DATA_WIDTH ( G_AXI_AWPAYLOAD_WIDTH ) ,
       .C_CHANNEL    ( P_FORWARD ),
@@ -4236,7 +4251,7 @@ module axi_register_slice_v2_1_20_axi_register_slice #
     
   end else if ((C_REG_CONFIG_AW == 16) && (C_RESERVE_MODE==0)) begin : aw16
     
-    axi_register_slice_v2_1_20_auto_slr # (
+    axi_register_slice_v2_1_31_auto_slr # (
       .C_DATA_WIDTH ( G_AXI_AWPAYLOAD_WIDTH ) 
     )
     aw_auto (
@@ -4265,7 +4280,7 @@ module axi_register_slice_v2_1_20_axi_register_slice #
     wire slr_awhandshake;
     wire slr_awready;
         
-    axi_register_slice_v2_1_20_source_region_slr #(
+    axi_register_slice_v2_1_31_source_region_slr #(
       .C_FAMILY     ( C_FAMILY         ) ,
       .C_REG_CONFIG ( C_REG_CONFIG_AW       ) ,
       .C_CHANNEL    ( P_FORWARD ),
@@ -4287,7 +4302,7 @@ module axi_register_slice_v2_1_20_axi_register_slice #
       .laguna_m_ready     ( slr_awready   )
     );
 
-    axi_register_slice_v2_1_20_dest_region_slr #(
+    axi_register_slice_v2_1_31_dest_region_slr #(
       .C_FAMILY     ( C_FAMILY         ) ,
       .C_REG_CONFIG ( C_REG_CONFIG_AW       ) ,
       .C_CHANNEL    ( P_FORWARD ),
@@ -4312,7 +4327,7 @@ module axi_register_slice_v2_1_20_axi_register_slice #
   end  // gen_aw
     
   if ((C_REG_CONFIG_W <= 9) && (C_RESERVE_MODE==0)) begin : w
-    axi_register_slice_v2_1_20_axic_register_slice # (
+    axi_register_slice_v2_1_31_axic_register_slice # (
       .C_FAMILY     ( C_FAMILY             ) ,
       .C_DATA_WIDTH ( G_AXI_WPAYLOAD_WIDTH ) ,
       .C_REG_CONFIG ( C_REG_CONFIG_W       ) 
@@ -4335,7 +4350,7 @@ module axi_register_slice_v2_1_20_axi_register_slice #
     
   end else if ((C_REG_CONFIG_W == 15) && (C_RESERVE_MODE==0)) begin : w15
     
-    axi_register_slice_v2_1_20_multi_slr # (
+    axi_register_slice_v2_1_31_multi_slr # (
       .C_FAMILY     ( C_FAMILY              ) ,
       .C_DATA_WIDTH ( G_AXI_WPAYLOAD_WIDTH ) ,
       .C_CHANNEL    ( P_FORWARD ),
@@ -4362,7 +4377,7 @@ module axi_register_slice_v2_1_20_axi_register_slice #
     
   end else if ((C_REG_CONFIG_W == 16) && (C_RESERVE_MODE==0)) begin : w16
     
-    axi_register_slice_v2_1_20_auto_slr # (
+    axi_register_slice_v2_1_31_auto_slr # (
       .C_DATA_WIDTH ( G_AXI_WPAYLOAD_WIDTH ) 
     )
     w_auto (
@@ -4391,7 +4406,7 @@ module axi_register_slice_v2_1_20_axi_register_slice #
     wire slr_whandshake;
     wire slr_wready;
         
-    axi_register_slice_v2_1_20_source_region_slr #(
+    axi_register_slice_v2_1_31_source_region_slr #(
       .C_FAMILY     ( C_FAMILY         ) ,
       .C_REG_CONFIG ( C_REG_CONFIG_W       ) ,
       .C_CHANNEL    ( P_FORWARD ),
@@ -4413,7 +4428,7 @@ module axi_register_slice_v2_1_20_axi_register_slice #
       .laguna_m_ready     ( slr_wready   )
     );
 
-    axi_register_slice_v2_1_20_dest_region_slr #(
+    axi_register_slice_v2_1_31_dest_region_slr #(
       .C_FAMILY     ( C_FAMILY         ) ,
       .C_REG_CONFIG ( C_REG_CONFIG_W       ) ,
       .C_CHANNEL    ( P_FORWARD ),
@@ -4438,7 +4453,7 @@ module axi_register_slice_v2_1_20_axi_register_slice #
   end  // gen_w
 
   if ((C_REG_CONFIG_B <= 9) && (C_RESERVE_MODE==0)) begin : b
-    axi_register_slice_v2_1_20_axic_register_slice # (
+    axi_register_slice_v2_1_31_axic_register_slice # (
       .C_FAMILY     ( C_FAMILY             ) ,
       .C_DATA_WIDTH ( G_AXI_BPAYLOAD_WIDTH ) ,
       .C_REG_CONFIG ( C_REG_CONFIG_B       ) 
@@ -4461,7 +4476,7 @@ module axi_register_slice_v2_1_20_axi_register_slice #
  
   end else if ((C_REG_CONFIG_B == 15) && (C_RESERVE_MODE==0)) begin : b15
     
-    axi_register_slice_v2_1_20_multi_slr # (
+    axi_register_slice_v2_1_31_multi_slr # (
       .C_FAMILY     ( C_FAMILY              ) ,
       .C_DATA_WIDTH ( G_AXI_BPAYLOAD_WIDTH ) ,
       .C_CHANNEL    ( P_RESPONSE ),
@@ -4488,7 +4503,7 @@ module axi_register_slice_v2_1_20_axi_register_slice #
     
   end else if ((C_REG_CONFIG_B == 16) && (C_RESERVE_MODE==0)) begin : b16
     
-    axi_register_slice_v2_1_20_auto_slr # (
+    axi_register_slice_v2_1_31_auto_slr # (
       .C_DATA_WIDTH ( G_AXI_BPAYLOAD_WIDTH ) 
     )
     b_auto (
@@ -4517,7 +4532,7 @@ module axi_register_slice_v2_1_20_axi_register_slice #
     wire slr_bhandshake;
     wire slr_bready;
         
-    axi_register_slice_v2_1_20_source_region_slr #(
+    axi_register_slice_v2_1_31_source_region_slr #(
       .C_FAMILY     ( C_FAMILY         ) ,
       .C_REG_CONFIG ( C_REG_CONFIG_B       ) ,
       .C_CHANNEL    ( P_RESPONSE ),
@@ -4539,7 +4554,7 @@ module axi_register_slice_v2_1_20_axi_register_slice #
       .laguna_m_ready     ( slr_bready   )
     );
 
-    axi_register_slice_v2_1_20_dest_region_slr #(
+    axi_register_slice_v2_1_31_dest_region_slr #(
       .C_FAMILY     ( C_FAMILY         ) ,
       .C_REG_CONFIG ( C_REG_CONFIG_B       ) ,
       .C_CHANNEL    ( P_RESPONSE ),
@@ -4564,7 +4579,7 @@ module axi_register_slice_v2_1_20_axi_register_slice #
   end  // gen_b
 
   if ((C_REG_CONFIG_AR <= 9) && (C_RESERVE_MODE==0)) begin : ar
-    axi_register_slice_v2_1_20_axic_register_slice # (
+    axi_register_slice_v2_1_31_axic_register_slice # (
       .C_FAMILY     ( C_FAMILY              ) ,
       .C_DATA_WIDTH ( G_AXI_ARPAYLOAD_WIDTH ) ,
       .C_REG_CONFIG ( C_REG_CONFIG_AR       ) 
@@ -4587,7 +4602,7 @@ module axi_register_slice_v2_1_20_axi_register_slice #
     
   end else if ((C_REG_CONFIG_AR == 15) && (C_RESERVE_MODE==0)) begin : ar15
     
-    axi_register_slice_v2_1_20_multi_slr # (
+    axi_register_slice_v2_1_31_multi_slr # (
       .C_FAMILY     ( C_FAMILY              ) ,
       .C_DATA_WIDTH ( G_AXI_ARPAYLOAD_WIDTH ) ,
       .C_CHANNEL    ( P_FORWARD ),
@@ -4614,7 +4629,7 @@ module axi_register_slice_v2_1_20_axi_register_slice #
     
   end else if ((C_REG_CONFIG_AR == 16) && (C_RESERVE_MODE==0)) begin : ar16
     
-    axi_register_slice_v2_1_20_auto_slr # (
+    axi_register_slice_v2_1_31_auto_slr # (
       .C_DATA_WIDTH ( G_AXI_ARPAYLOAD_WIDTH ) 
     )
     ar_auto (
@@ -4643,7 +4658,7 @@ module axi_register_slice_v2_1_20_axi_register_slice #
     wire slr_arhandshake;
     wire slr_arready;
         
-    axi_register_slice_v2_1_20_source_region_slr #(
+    axi_register_slice_v2_1_31_source_region_slr #(
       .C_FAMILY     ( C_FAMILY         ) ,
       .C_REG_CONFIG ( C_REG_CONFIG_AR       ) ,
       .C_CHANNEL    ( P_FORWARD ),
@@ -4665,7 +4680,7 @@ module axi_register_slice_v2_1_20_axi_register_slice #
       .laguna_m_ready     ( slr_arready   )
     );
 
-    axi_register_slice_v2_1_20_dest_region_slr #(
+    axi_register_slice_v2_1_31_dest_region_slr #(
       .C_FAMILY     ( C_FAMILY         ) ,
       .C_REG_CONFIG ( C_REG_CONFIG_AR       ) ,
       .C_CHANNEL    ( P_FORWARD ),
@@ -4690,7 +4705,7 @@ module axi_register_slice_v2_1_20_axi_register_slice #
   end  // gen_ar
         
   if ((C_REG_CONFIG_R <= 9) && (C_RESERVE_MODE==0)) begin : r
-    axi_register_slice_v2_1_20_axic_register_slice # (
+    axi_register_slice_v2_1_31_axic_register_slice # (
       .C_FAMILY     ( C_FAMILY             ) ,
       .C_DATA_WIDTH ( G_AXI_RPAYLOAD_WIDTH ) ,
       .C_REG_CONFIG ( C_REG_CONFIG_R       ) 
@@ -4713,7 +4728,7 @@ module axi_register_slice_v2_1_20_axi_register_slice #
     
   end else if ((C_REG_CONFIG_R == 15) && (C_RESERVE_MODE==0)) begin : r15
     
-    axi_register_slice_v2_1_20_multi_slr # (
+    axi_register_slice_v2_1_31_multi_slr # (
       .C_FAMILY     ( C_FAMILY              ) ,
       .C_DATA_WIDTH ( G_AXI_RPAYLOAD_WIDTH ) ,
       .C_CHANNEL    ( P_RESPONSE ),
@@ -4740,7 +4755,7 @@ module axi_register_slice_v2_1_20_axi_register_slice #
     
   end else if ((C_REG_CONFIG_R == 16) && (C_RESERVE_MODE==0)) begin : r16
     
-    axi_register_slice_v2_1_20_auto_slr # (
+    axi_register_slice_v2_1_31_auto_slr # (
       .C_DATA_WIDTH ( G_AXI_RPAYLOAD_WIDTH ) 
     )
     r_auto (
@@ -4769,7 +4784,7 @@ module axi_register_slice_v2_1_20_axi_register_slice #
     wire slr_rhandshake;
     wire slr_rready;
         
-    axi_register_slice_v2_1_20_source_region_slr #(
+    axi_register_slice_v2_1_31_source_region_slr #(
       .C_FAMILY     ( C_FAMILY         ) ,
       .C_REG_CONFIG ( C_REG_CONFIG_R       ) ,
       .C_CHANNEL    ( P_RESPONSE ),
@@ -4791,7 +4806,7 @@ module axi_register_slice_v2_1_20_axi_register_slice #
       .laguna_m_ready     ( slr_rready   )
     );
 
-    axi_register_slice_v2_1_20_dest_region_slr #(
+    axi_register_slice_v2_1_31_dest_region_slr #(
       .C_FAMILY     ( C_FAMILY         ) ,
       .C_REG_CONFIG ( C_REG_CONFIG_R       ) ,
       .C_CHANNEL    ( P_RESPONSE ),
