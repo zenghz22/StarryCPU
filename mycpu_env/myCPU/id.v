@@ -2,8 +2,8 @@
 module id_stage(
     input         clk,
     input         reset,
-    input         id_pc,
-    input         id_inst,
+    input  [31:0] id_pc,
+    input  [31:0] id_inst,
     input         wb_gr_we,
     input  [4:0]  wb_dest,
     input  [31:0] wb_final_result,  
@@ -16,9 +16,12 @@ module id_stage(
     output [4: 0] dest,
     output [31:0] rj_value,
     output [31:0] rkd_value,
-    output [31:0] imm   
+    output [31:0] imm,
+    output        br_taken,
+    output [31:0] br_target   
 );
-    
+wire valid;
+assign valid=(id_pc == 32'h1bfffffc ) ? 1'b0 : ~reset;    
 //RegFile
 wire [ 4:0] rf_raddr1;
 wire [31:0] rf_rdata1;
@@ -124,7 +127,7 @@ assign inst_b      = op_31_26_d[6'h14];
 assign inst_bl     = op_31_26_d[6'h15];
 assign inst_beq    = op_31_26_d[6'h16];
 assign inst_bne    = op_31_26_d[6'h17];
-assign inst_lu12i_w= op_31_26_d[6'h05] & ~inst[25];
+assign inst_lu12i_w= op_31_26_d[6'h05] & ~id_inst[25];
 
 assign alu_op[ 0] = inst_add_w | inst_addi_w | inst_ld_w | inst_st_w
                     | inst_jirl | inst_bl;
@@ -172,7 +175,7 @@ assign src2_is_imm   = inst_slli_w |
 
 assign res_from_mem  = inst_ld_w;
 assign dst_is_r1     = inst_bl;
-assign gr_we         = ~inst_st_w & ~inst_beq & ~inst_bne & ~inst_b;
+assign gr_we         = (id_inst==32'b0) ?1'b0 : (~inst_st_w & ~inst_beq & ~inst_bne & ~inst_b);
 assign mem_we        = inst_st_w;
 assign dest          = dst_is_r1 ? 5'd1 : rd;
 
@@ -189,8 +192,9 @@ assign br_taken = (   inst_beq  &&  rj_eq_rd
                    || inst_bl
                    || inst_b
                   ) && valid;
-assign br_target = (inst_beq || inst_bne || inst_bl || inst_b) ? (pc + br_offs) :
+assign br_target = (inst_beq || inst_bne || inst_bl || inst_b) ? (id_pc + br_offs) :
                                                    /*inst_jirl*/ (rj_value + jirl_offs);
 assign rf_we    = wb_gr_we;
 assign rf_waddr = wb_dest;
 assign rf_wdata = wb_final_result;
+endmodule

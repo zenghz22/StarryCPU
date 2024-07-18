@@ -20,6 +20,9 @@ module mycpu_top(
   output wire [31:0] debug_wb_rf_wdata
 );
 
+assign inst_sram_en=1'b1;
+assign data_sram_en=1'b1;
+
 reg reset;
 reg valid;
 always @(posedge clk) reset <= ~resetn;
@@ -35,7 +38,8 @@ end
 
 //IF STAGE
 wire [31:0] if_pc;
-      
+wire        id_br_taken;
+wire [31:0] id_br_target;      
 assign inst_sram_we = 1'b0;
 assign inst_sram_addr = if_pc;
 assign inst_sram_wdata = 32'b0;
@@ -50,15 +54,17 @@ if_stage if_stage(
 
 
 // IF/ID
-reg [31:0] if_id_pc;
-reg [31:0] if_id_inst;
+reg [31:0]  if_id_pc;
+//reg [31:0] if_id_inst;
+wire [31:0] if_id_inst;
+assign if_id_inst = inst_sram_rdata;
 always @(posedge clk) begin
     if (reset) begin
-        if_id_pc <= 0;
-        if_id_inst <= 0;
+        if_id_pc <= 32'h1bfffffc;
+        //if_id_inst <= 32'h02800000;
     end else begin
         if_id_pc <= if_pc;
-        if_id_inst <= inst_sram_rdata;
+        //if_id_inst <= inst_sram_rdata;
     end
 end
 
@@ -68,7 +74,7 @@ wire [31:0] id_inst;
 wire [11:0] id_alu_op;
 wire        id_load_op;
 wire        id_src2_is_imm;
-wire        id_res_from_mem;;
+wire        id_res_from_mem;
 wire        id_gr_we;
 wire        id_mem_we;
 wire [4:0]  id_dest;
@@ -76,9 +82,12 @@ wire [31:0] id_rj_value;
 wire [31:0] id_rkd_value;
 wire [31:0] id_imm;
 
+wire        wb_gr_we;
+wire [4:0]  wb_dest;
+wire [31:0] wb_final_result;
+
 assign id_pc =if_id_pc;
 assign id_inst=if_id_inst;
-
 
 id_stage id_stage(
     .clk            (clk),
@@ -100,12 +109,13 @@ id_stage id_stage(
     .dest           (id_dest),  //写回的寄存器编号
     .rj_value       (id_rj_value),
     .rkd_value      (id_rkd_value),
-    .imm            (id_imm)
+    .imm            (id_imm),
     //输出   to IF
-    . 
+    .br_taken       (id_br_taken),
+    .br_target      (id_br_target)
 );
 assign debug_wb_pc = wb_pc;
-assign debug_wb_rf_we =wb_gr_we;
+assign debug_wb_rf_we ={4{wb_gr_we}};
 assign debug_wb_rf_wnum=wb_dest;
 assign debug_wb_rf_wdata=wb_final_result;
 
@@ -124,7 +134,7 @@ reg [31:0]  id_ex_imm;
 
 always @(posedge clk) begin
     if (reset) begin
-
+        id_ex_pc <= 32'h1bfffffc;
         id_ex_alu_op <= 0;  
         id_ex_load_op <= 0;  
         id_ex_src2_is_imm <= 0;  
@@ -183,6 +193,7 @@ reg          ex_mem_mem_we ;
 reg [4:0]    ex_mem_dest;
 always @(posedge clk) begin
     if (reset) begin
+        ex_mem_pc<=32'h1bfffffc;
         ex_mem_alu_result<=0;
         ex_mem_rkd_value<=0;
         ex_mem_res_from_mem<=0;
@@ -208,8 +219,10 @@ wire        mem_res_from_mem;
 wire        mem_gr_we;
 wire        mem_mem_we ;
 wire [4:0]  mem_dest;
-assign      mem_rkd_value = ex_mem_rkd_value;
+
 assign      mem_pc        = ex_mem_pc;
+assign      mem_alu_result= ex_mem_alu_result;
+assign      mem_rkd_value = ex_mem_rkd_value;
 assign      mem_res_from_mem=ex_mem_res_from_mem;
 assign      mem_gr_we     = ex_mem_gr_we;
 assign      mem_mem_we    = ex_mem_mem_we;
@@ -229,15 +242,17 @@ reg [4:0]  mem_wb_dest;
 reg [31:0] mem_wb_mem_result;
 always @(posedge clk) begin
     if (reset) begin
+        mem_wb_pc<=32'h1bfffffc;
         mem_wb_alu_result<=0;
         mem_wb_res_from_mem<=0;
         mem_wb_gr_we<=0;
         mem_wb_mem_result<=0;
         mem_wb_dest<=0;
     end else begin
+        mem_wb_pc<=mem_pc;
         mem_wb_alu_result<=mem_alu_result;
         mem_wb_res_from_mem<=mem_res_from_mem;
-        mem_wb_gr_we<=0<=mem_gr_we;  
+        mem_wb_gr_we<=mem_gr_we;  
         mem_wb_mem_result<=mem_result;
         mem_wb_dest<=mem_dest;
     end
@@ -247,8 +262,7 @@ end
 wire [31:0] wb_pc;
 wire [31:0] wb_alu_result;
 wire        wb_res_from_mem;
-wire        wb_gr_we;
-wire        wb_dest;
+
 wire [31:0] wb_mem_result;
 assign      wb_pc = mem_wb_pc;
 assign      wb_alu_result = mem_wb_alu_result;
@@ -257,6 +271,5 @@ assign      wb_gr_we = mem_wb_gr_we;
 assign      wb_dest = mem_wb_dest;
 assign      wb_mem_result = mem_wb_mem_result;
 
-wire [31:0] wb_final_result;
 assign      wb_final_result = wb_res_from_mem?wb_mem_result:wb_alu_result;
 endmodule
